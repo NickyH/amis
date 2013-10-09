@@ -1,0 +1,214 @@
+@import "globals.less";
+
+//temp classes
+
+.temp-map {
+  opacity: 0.3;
+}
+
+div {
+  display: inline-block;
+}
+
+
+// layout
+
+
+//top bar
+
+.ui-grid-solo.top-bar {
+  background : @grey-medium;
+  width: 100%;
+  height: 100px;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+//top bar right panel (utility bar)
+
+.utility-tab {
+  display: inline;
+  float: right;
+  padding: 0;
+  margin: 0;
+  .tab-shape { height: 100px; }
+  width: auto;
+}
+
+// top right icons
+
+.top-bar-icons {
+  border-radius: 8px;
+  position: absolute;
+  top: 0px;
+  margin: 24px;
+  width: 50px;
+  background-color: @utility-icon-colour !important;
+  opacity: 0.8;
+  &.icon-address-book {
+    right: 270px;
+  }
+  &.icon-locate-me {
+    right: 150px;
+  }
+  &.icon-follow-me {
+    right: 30px;
+  }
+  //form tool icons
+  &.icon-assets {
+    right: 330px;
+  }
+  &.icon-request {
+    right: 260px;
+  }
+  &.icon-defects {
+    right: 190px;
+  }
+  &.icon-tasks {
+    right: 120px;
+  }
+  &.icon-settings {
+    right: 50px;
+  }
+}
+
+.tab-shape {
+  margin-top: 0;
+  margin-right: 0;
+  margin: 0;
+  opacity: 0.7;
+  float: right;
+  height: 100px;
+  z-index: 3;
+}
+
+//left bar
+
+.ui-grid-solo.left-bar {
+  width: 120px;
+  background : @grey-dark;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 4;
+}
+
+.ui-grid-solo.map-panel {
+  width: 1024px;
+  height: 768px;
+  background : @form-panel-background;
+  margin-left: 120px;
+  padding: 0;
+}
+
+.left-bar-icons {
+  border-radius: 8px;
+  width: 50px;
+  height: 50px;
+  margin-left: 34px;
+  &.map-icon {
+    background-color: @map-icon-colour !important;
+    margin-top: 120px;
+    &.inactive {
+    opacity: 0.5;
+    background-color: @map-icon-inactive !important;
+    }
+  }
+  &.detail-icon {
+    background-color: @form-icon-colour !important;
+    margin-top: 30px;
+    &.inactive {
+    opacity: 0.5;
+    background-color: @form-icon-inactive !important;
+    }
+  }
+  &.search-icon {
+    background-color: @map-icon-colour !important;
+    margin-top: 100px;
+    &.inactive {
+    opacity: 0.5;
+    background-color: @map-icon-inactive !important;
+    }
+  }
+  &.number-icon {
+    background-color: @map-icon-colour;
+    margin-top: 30px;
+    &.inactive {
+    opacity: 0.5;
+    background-color: @map-icon-inactive;
+    }
+  }
+  &.layers-icon {
+    background-color: @map-icon-colour;
+    margin-top: 30px;
+    &.inactive {
+    opacity: 0.5;
+    background-color: @map-icon-inactive !important;
+    }
+  }
+}
+
+// forms
+
+.form-panel
+{
+  background-color: @form-panel-colour;
+  border: @form-panel-border;
+  border-radius : @form-panel-border-radius;
+  -moz-border-radius : 12px;
+  -webkit-border-radius : 12px;
+  padding: 20px 20px 20px 20px;
+  &.form-panel-1 {
+    width: 400px;
+    height: 250px;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+  }
+  &.form-panel-2 {
+    width: 400px;
+    height: 250px;
+    position: absolute;
+    top: 200px;
+    left: 650px;
+  }
+  &.form-panel-3 {
+    width: 850px;
+    height: 300px;
+    position: absolute;
+    top: 450px;
+    left: 200px;
+  }
+}
+
+.ui-field-contain div.ui-input-text {
+  margin-bottom: 20px; //spacing between text input boxes
+}
+
+input.ui-input-text {
+  font-size: @input-font-size;
+}
+
+.ui-input-text, .ui-shadow-inset, .ui-corner-all, .ui-btn-shadow, .ui-body-c, .ui-select {
+  border: 1px solid @input-border-colour;
+  width: 80%;
+  height: 40px;
+  background: @white;
+  border-radius: 8px;
+  margin: 10px auto 10px 10px;
+  &.ui-select {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+
+label.select-label-hidden {
+  display: none;
+}
+
+
+

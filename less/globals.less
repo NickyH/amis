@@ -1,0 +1,72 @@
+
+// Two main colours
+@map-highlight-colour: #862BD6;
+@form-highlight-colour: #67A50E;
+
+// Fixed colours
+
+@grey-dark: #4D4D4D;
+@grey-medium: #CCCCCC;
+
+@white-medium: rgb(242, 242, 242);
+@white: #FFFFFF;
+
+//Form colours
+
+@form-panel-fill-light: #EAE8E8;
+
+// Customisable colours
+
+@map-tab-colour: @map-highlight-colour;
+@map-tab-border: 1px solid @white;
+@map-icon-colour: @map-highlight-colour;
+@map-icon-inactive: fade(@map-icon-colour, 50%);
+@map-panel-background: @white-medium;
+
+
+@form-tab-colour: @form-highlight-colour;
+@form-tab-border: 1px solid @white;
+@form-icon-colour: @form-highlight-colour;
+@form-icon-inactive: fade(@form-icon-colour, 50%);
+@form-panel-background: @white-medium;
+
+@utility-icon-colour: @white;
+
+
+//Forms
+@form-panel-border: 1px solid @form-highlight-colour;
+@form-panel-border-radius: 12px;
+
+//Light
+@form-panel-colour: @form-panel-fill-light;
+@input-border-colour: @grey-medium;
+
+//Dark
+
+
+// Fonts
+
+@input-font-size: 14px;
+
+
+
+// Media Queries
+
+// responsive
+@widthNarrow:         ~"(max-width: 320px)";
+@widthMedium:         ~"(max-width: 600px)";
+@widthMediumLarge:        ~"(min-width: 601px) and (max-width: 768px)";
+@widthLarge:          ~"(min-width: 601px)";
+
+@heightShort:         ~"(max-height: 479px)";
+@heightShortMedium:       ~"(min-height: 480px) and (max-height: 560px)";
+@heightMedium:          ~"(max-height: 700px)";
+@heightTall:          ~"(min-height: 701px)";
+@mediaScreen:         ~"only screen and ";
+
+
+
+@mobile:                        @mediaScreen @widthMedium;
+@mobilePortrait:                @mediaScreen @widthNarrow;
+@tablet:                        @mediaScreen @widthLarge;
+@tabletPortrait:                @mediaScreen @widthMediumLarge;
