@@ -6,6 +6,8 @@
   opacity: 0.3;
 }
 
+// jquery mobile specific overrides
+
 div {
   display: inline-block;
 }
@@ -13,13 +15,24 @@ div {
 
 // layout
 
+.ui-mobile .ui-page {
+  @media @tabletLandscape {
+    min-height: @tabletLandscapeHeight !important;
+    min-width: @tabletLandscapeWidth !important;
+  }
+  @media @tabletPortrait {
+    min-height: @tabletPortraitHeight !important;
+    min-width: @tabletPortraitWidth !important;
+  }
+}
+
 
 //top bar
 
 .ui-grid-solo.top-bar {
   background : @grey-medium;
   width: 100%;
-  height: 100px;
+  height: @top-bar-height;
   padding: 0;
   margin: 0;
   position: fixed;
@@ -46,32 +59,39 @@ div {
   top: 0px;
   margin: 24px;
   width: 50px;
-  background-color: @utility-icon-colour !important;
   opacity: 0.8;
   &.icon-address-book {
     right: 270px;
+    background-color: @utility-icon-colour !important;
   }
   &.icon-locate-me {
     right: 150px;
+    background-color: @utility-icon-colour !important;
   }
   &.icon-follow-me {
     right: 30px;
+    background-color: @utility-icon-colour !important;
   }
   //form tool icons
   &.icon-assets {
     right: 330px;
+    background-color: @form-highlight-colour !important;
   }
   &.icon-request {
     right: 260px;
+    background-color: @form-highlight-colour !important;
   }
   &.icon-defects {
     right: 190px;
+    background-color: @form-highlight-colour !important;
   }
   &.icon-tasks {
     right: 120px;
+    background-color: @form-highlight-colour !important;
   }
   &.icon-settings {
     right: 50px;
+    background-color: @form-highlight-colour !important;
   }
 }
 
@@ -88,7 +108,7 @@ div {
 //left bar
 
 .ui-grid-solo.left-bar {
-  width: 120px;
+  width: @left-bar-width;
   background : @grey-dark;
   position: fixed;
   left: 0;
@@ -98,11 +118,7 @@ div {
 }
 
 .ui-grid-solo.map-panel {
-  width: 1024px;
-  height: 768px;
-  background : @form-panel-background;
-  margin-left: 120px;
-  padding: 0;
+  height: 768px !important;
 }
 
 .left-bar-icons {
@@ -154,34 +170,109 @@ div {
 
 // forms
 
+//form tabs
+
+.ui-grid-solo.tab-bar.ui-navbar.ui-mini {
+  position: fixed;
+  top: @top-bar-height;
+  left: @left-bar-width;
+  margin-left: 50px;
+  width: 60%;
+  background-color: @form-tab-colour;
+  opacity: 0.7;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  a {
+    width: 20%;
+    margin-left: 20px;
+    padding-top: 10px;
+    &:visited {
+      color: @black-medium;
+    }
+  }
+}
+
+.content_div {
+    display: none;
+}
+.content_div:first-child {
+    display: block;
+}
+
+.tab-bar .tab {
+  width: 80px;
+  height: 30px;
+  border: @tab-border;
+  border-radius: @tab-border-radius;
+  background-color: @tab-fill;
+  text-decoration: none;
+  a {
+    color: @black-medium;
+  }
+  .font-tab;
+  &.ui-btn {
+    margin: 0;
+  }
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+  &.tab-active {
+  height: 45px;
+  margin-bottom: 0px !important;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border: @tab-border-active;
+  background-color: @tab-fill-active;
+  }
+}
+
+
+
+#details-page {
+  background-color: @form-background-colour-light;
+}
+
+.ui-block-a {
+  &.form-container {
+    display: inline;
+    float: right;
+    height: @heightTall;
+    width: @widthLarge;
+    margin-left: 100px;
+    margin-top: 180px;
+    }
+  }
+
+.ui-block-solo {
+  &.form-container {
+  display: inline;
+  float: left;
+  height: @heightTall;
+  width: 770px;
+  }
+}
+
 .form-panel
 {
   background-color: @form-panel-colour;
   border: @form-panel-border;
-  border-radius : @form-panel-border-radius;
-  -moz-border-radius : 12px;
-  -webkit-border-radius : 12px;
-  padding: 20px 20px 20px 20px;
+  border-radius: @form-panel-border-radius;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  margin: 20px 20px 20px 40px;
   &.form-panel-1 {
-    width: 400px;
-    height: 250px;
-    position: absolute;
-    top: 200px;
-    left: 200px;
+    width: auto;
+    height: auto;
+    padding: 20px;
   }
   &.form-panel-2 {
-    width: 400px;
-    height: 250px;
-    position: absolute;
-    top: 200px;
-    left: 650px;
+    width: auto;
+    height: auto;
+    padding: 20px;
   }
   &.form-panel-3 {
-    width: 850px;
-    height: 300px;
-    position: absolute;
-    top: 450px;
-    left: 200px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
   }
 }
 

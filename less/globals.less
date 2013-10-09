@@ -11,6 +11,9 @@
 @white-medium: rgb(242, 242, 242);
 @white: #FFFFFF;
 
+@black: #000000;
+@black-medium: #272825;
+
 //Form colours
 
 @form-panel-fill-light: #EAE8E8;
@@ -32,16 +35,34 @@
 
 @utility-icon-colour: @white;
 
+//Dimensions
+
+@left-bar-width: 120px;
+@top-bar-height: 100px;
 
 //Forms
 @form-panel-border: 1px solid @form-highlight-colour;
 @form-panel-border-radius: 12px;
 
+//Tabs
+@tab-border: 1px solid @white;
+@tab-border-radius: 7px;
+@tab-fill: @white;
+@tab-fill-active: @white-medium;
+@tab-border-active: 1px solid @white-medium;
+
+.font-tab { font-family: 'Arial', sans-serif; font-weight: normal; }
+
+
 //Light
 @form-panel-colour: @form-panel-fill-light;
 @input-border-colour: @grey-medium;
+@form-background-colour-light: @white-medium;
 
 //Dark
+
+@form-background-colour-dark: @black-medium;
+
 
 
 // Fonts
@@ -55,18 +76,26 @@
 // responsive
 @widthNarrow:         ~"(max-width: 320px)";
 @widthMedium:         ~"(max-width: 600px)";
-@widthMediumLarge:        ~"(min-width: 601px) and (max-width: 768px)";
-@widthLarge:          ~"(min-width: 601px)";
+@widthMediumLarge:    ~"(min-width: 601px) and (max-width: 768px)";
+@widthLarge:          ~"(min-width: 1024px)";
 
 @heightShort:         ~"(max-height: 479px)";
-@heightShortMedium:       ~"(min-height: 480px) and (max-height: 560px)";
-@heightMedium:          ~"(max-height: 700px)";
-@heightTall:          ~"(min-height: 701px)";
+@heightShortMedium:   ~"(min-height: 480px) and (max-height: 560px)";
+@heightMedium:        ~"(max-height: 700px)";
+@heightTall:          ~"(min-height: 768px)";
 @mediaScreen:         ~"only screen and ";
 
 
+// condition:  is the tablet rotated portrait or landscape?;
+@tabletLandscape:      ~"(orientation: landscape)";
+@tabletPortrait:       ~"(orientation: portrait)";
 
-@mobile:                        @mediaScreen @widthMedium;
-@mobilePortrait:                @mediaScreen @widthNarrow;
-@tablet:                        @mediaScreen @widthLarge;
-@tabletPortrait:                @mediaScreen @widthMediumLarge;
+
+// set the min-width and height
+@tabletLandscapeWidth:               ~"(min-width: 1024px) and (orientation: landscape)";
+@tabletLandscapeHeight:              ~"(min-height: 768px) and (orientation: landscape)";
+
+@tabletPortraitWidth:                ~"(min-width: 768px) and (orientation: portrait)";
+@tabletPortraitHeight:               ~"(min-height: 1024px) and (orientation: portrait)";
+
+
