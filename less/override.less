@@ -200,13 +200,17 @@ div {
   opacity: 0.7;
   border-bottom-right-radius: 7px;
   border-bottom-left-radius: 7px;
+  -moz-box-shadow: inset -4px -4px @grey-medium;
+  -webkit-box-shadow: inset -4px -4px @grey-medium;
+  box-shadow: inset -4px -4px @grey-medium;
+
   a {
     width: 20%;
     margin-left: 20px;
     padding-top: 10px;
-    &:visited {
-      color: @black-medium;
-    }
+  }
+  .ui-btn-text {
+    color: @black-medium;
   }
 }
 
