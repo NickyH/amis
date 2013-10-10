@@ -4,8 +4,13 @@ $(function(){
   $("#details-link").on('click', show_active_tab);
   $('[data-role="navbar"] a').on('click', change_tab_content);
   $("#show-tab").on('click', show_active_tab);
-  $("#show-tab").trigger('click');
+  $("#show-tab").trigger('click'); //triggers click to show content on first tab on page load
   insert_map();
+});
+
+
+$(function(){
+  $("#map-link").on('click', refresh_map);
 });
 
 // add tab-active class to tab on click
@@ -27,8 +32,12 @@ function change_tab_content()
 
 function insert_map()
 {
-  console.log('map!!!!');
   $.get('map_openlayer.html', function(data) {
     $('#insert-map').html(data);
     });
+}
+
+function refresh_map()
+{
+  window.location = ('index.html');
 }
