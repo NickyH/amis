@@ -31,11 +31,13 @@
       </div>
 
       <!-- form tabs -->
-      <div class="ui-grid-solo tab-bar" data-role="navbar" data-theme="none">
-        <a id="show-tab" class="tab tab-active" href="#" data-href="form1-tab1">Defect Information</a>
-        <a class="tab" href="#" data-href="form1-tab2">Defect Condition</a>
-        <a class="tab" href="#" data-href="form1-tab3">Other Notes</a>
-        <a class="tab" href="#" data-href="form1-tab4">Location Reference</a>
+      <div class="tab-bar-underlay">
+        <div class="ui-grid-solo tab-bar" data-role="navbar" data-theme="none">
+          <a id="show-tab" class="tab tab-active" href="#" data-href="form1-tab1">Defect Information</a>
+          <a class="tab" href="#" data-href="form1-tab2">Defect Condition</a>
+          <a class="tab" href="#" data-href="form1-tab3">Other Notes</a>
+          <a class="tab" href="#" data-href="form1-tab4">Location Reference</a>
+        </div>
       </div>
 
       <div class="content_div">onLoad Content</div>
@@ -48,6 +50,118 @@
         <div class="ui-block-a form-container">
 
           <!-- form panel 1 -->
+          <div class="ui-grid-a">
+            <div class="form-panel form-panel-1">
+              <!-- numbered circle in each form panel-->
+              <div class="number-circle">
+                <div class="number-in-circle">
+                  1
+                </div>
+              </div>
+              <div data-role="fieldcontain" class="ui-hide-label">
+
+                <input class="single-line-input" type="text" name="id" id="input-id" value="" placeholder="ID"/>
+
+                <!-- category dropdown box-->
+                <div data-role="fieldcontain">
+                  <label for="select-category" class="select-label-hidden">Category...</label>
+                  <select name="select-category" id="select-category">
+                    <option value="" data-placeholder="true"></option>
+                    <option value="small">One</option>
+                    <option value="medium">Two</option>
+                    <option value="large">Three</option>
+                  </select>
+                </div>
+
+                <input class="single-line-input" type="text" name="status" id="input-status" value="" placeholder="Status"/>
+                <input class="single-line-input" type="text" name="fromAsset" id="input-from-asset" value="" placeholder="From Asset"/>
+              </div>
+            </div>
+          </div>
+
+          <!-- form panel 2 -->
+          <div class="ui-grid-b">
+            <div class="form-panel form-panel-2">
+              <!-- numbered circle in each form panel-->
+              <div class="number-circle">
+                <div class="number-in-circle">
+                  2
+                </div>
+              </div>
+              <div data-role="fieldcontain" class="ui-hide-label">
+                <input class="single-line-input" type="text" name="code" id="input-code" value="" placeholder="Code"/>
+                <!-- cateogry dropdown box-->
+                <div data-role="fieldcontain">
+                  <label for="select-category" class="select-label-hidden">Class...</label>
+                  <select name="select-class" id="select-class">
+                    <option value="" data-placeholder="true"></option>
+                    <option value="small">One</option>
+                    <option value="medium">Two</option>
+                    <option value="large">Three</option>
+                  </select>
+                </div>
+
+                <input class="single-line-input" type="text" name="severity" id="input-severity" value="" placeholder="Severity"/>
+                <input class="single-line-input" type="text" name="priority" id="input-priority" value="" placeholder="Priority"/>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-block-solo form-container">
+            <div class="form-panel form-panel-3">
+              <!-- numbered circle in each form panel-->
+              <div class="number-circle">
+                <div class="number-in-circle">
+                  3
+                </div>
+              </div>
+              <div data-role="fieldcontain" class="ui-hide-label">
+                <input class="single-line-input" type="text" name="code" id="input-code" value="" placeholder="Code"/>
+              </div>
+            </div>
+          </div>
+
+          </div>
+
+        </div> <!-- end form1 tab1 -->
+
+        <!-- start form1 tab2 -->
+        <div id="form1-tab2" class="content_div">
+          <div class="ui-block-a form-container">
+
+            <div class="ui-block-solo form-container">
+              <div class="form-panel form-panel-3">
+                <div data-role="fieldcontain" class="ui-hide-label">
+                  <input class="single-line-input" type="text" name="code" id="input-code" value="" placeholder="Code"/>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- end form1 tab2 -->
+
+        <!-- start form1 tab3 -->
+        <div id="form1-tab3" class="content_div">
+          <div class="ui-block-a form-container">
+
+            <div class="ui-block-solo form-container">
+              <div class="form-panel form-panel-3">
+                <div data-role="fieldcontain" class="ui-hide-label">
+                  <input class="single-line-input" type="text" name="code" id="input-code" value="" placeholder="Code"/>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- end form1 tab3 -->
+
+        <!-- start form1 tab4 -->
+        <div id="form1-tab4" class="content_div">
+          <div class="ui-block-a form-container">
+
+            <!-- form panel 1 -->
           <div class="ui-grid-a">
             <div class="form-panel form-panel-1">
               <div data-role="fieldcontain" class="ui-hide-label">
@@ -92,24 +206,9 @@
             </div>
           </div>
 
-          <div class="ui-block-solo form-container">
-            <div class="form-panel form-panel-3">
-              <div data-role="fieldcontain" class="ui-hide-label">
-                <input class="single-line-input" type="text" name="code" id="input-code" value="" placeholder="Code"/>
-              </div>
-            </div>
           </div>
-
-          </div>
-
-        <!-- end forms content -->
-        </div> <!-- end form1 tab1 -->
-
-        <!-- start form1 tab2 -->
-        <div id="form1-tab2" class="content_div">
-          Some 'B' Content
         </div>
-        <!-- end form1 tab2 -->
+        <!-- end form1 tab4 -->
 
         <!-- left bar pane forms -->
         <div class="ui-grid-solo left-bar">
