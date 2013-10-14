@@ -30,6 +30,14 @@ div {
   display: inline-block;
 }
 
+.ui-grid-a {
+  width: 48% !important;
+}
+
+.ui-grid-b {
+  width: 48% !important;
+}
+
 
 // layout
 
@@ -55,7 +63,7 @@ div {
   margin: 0;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 3;
 }
 
 //top bar right panel (utility bar)
@@ -194,6 +202,20 @@ div {
 
 // forms
 
+#insert-form {
+  position: static;
+  // margin-left: @left-bar-width;
+  // margin-top: @top-bar-height;
+  width: 1000px;
+  height: 668px;
+}
+
+.content_div {
+  height: 100%;
+  width: 100%;
+  background-color: @white-medium;
+}
+
 //form tabs
 
 .tab-bar-underlay {
@@ -284,6 +306,7 @@ div {
   border: 1px solid @form-highlight-colour;
   margin: 0;
   padding-top: 0;
+  z-index: 2;
 }
 
 .number-in-circle {
@@ -306,7 +329,7 @@ div {
     height: @heightTall;
     width: @widthLarge;
     margin-left: 100px;
-    margin-top: 180px;
+    margin-top: 150px;
     }
   }
 
@@ -326,22 +349,23 @@ div {
   border-radius: @form-panel-border-radius;
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px;
-  margin: 20px 0px 20px 40px;
+  margin: 50px 0px 20px 40px;
+  display: inline-block;
   &.form-panel-1 {
-    width: auto;
+    width: 70%;
     height: auto;
     padding: 20px;
-    margin-right: 30px !important;
+    margin-right: 2% !important;
   }
   &.form-panel-2 {
-    width: auto;
+    width: 70%;
     height: auto;
     padding: 20px;
-    margin-right: 30px !important;
-    margin-left: 5px !important;
+    margin-right: 2% !important;
+    margin-left: 1% !important;
   }
   &.form-panel-3 {
-    width: 100%;
+    width: 91%;
     height: 100%;
     padding: 20px;
   }
@@ -368,9 +392,73 @@ input.ui-input-text {
   }
 }
 
+.single-line-input, .dropdown-input {
+  width: 85%;
+  border-radius: 5px;
+}
+
+.input-container {
+  width: 98%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: block;
+}
+
+.input-container-small {
+  width: 45%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  float: left;
+}
+
+label.inline-label {
+  font: @form-label-font;
+  margin-right: 10px;
+  display: block;
+  margin-bottom: 5px;
+}
+
 label.select-label-hidden {
   display: none;
 }
+
+div[data-role="fieldcontain"] {
+    width: 100% !important;
+}
+
+// form buttons
+
+.form-buttons {
+  width: 100%;
+  display: block;
+  float: right;
+  height: 50px;
+  position: fixed;
+  top: 170px;
+  right: 0;
+  background-color: @white-medium;
+  z-index: 3;
+    .form-button {
+    float: right;
+    height: 30px;
+    min-width: 160px;
+    border-radius: 20px;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 30px;
+    font: @form-button-font;
+    &.save-button {
+    background-color: #2584cd;
+    }
+    &.cancel-button {
+    background-color: #bb5555;
+    }
+  }
+}
+
+
 
 
 

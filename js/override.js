@@ -6,6 +6,8 @@ $(function(){
   $("#show-tab").on('click', show_active_tab);
   $("#show-tab").trigger('click'); //triggers click to show content on first tab on page load
   insert_map();
+  $(".top-bar-icons").on('click', insert_form);
+
 });
 
 
@@ -40,4 +42,22 @@ function insert_map()
 function refresh_map()
 {
   window.location = ('index.html');
+}
+
+// inserts the relevant form into the form page
+function insert_form()
+{
+  var link_index = $('.top-bar-icons').index(this);
+  console.log(link_index);
+  $.get('forms/form_' + link_index + '.html', function(data) {
+    $('#insert-form').html(data);
+    // $.mobile.loadPage( "forms/form_" + link_index + ".html", {
+    //   pageContainer: $('#insert-form')
+    });
+  $('#insert-form').trigger('create');
+}
+
+function refresh_form()
+{
+  window.location = ('form.html');
 }
