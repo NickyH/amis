@@ -1,15 +1,138 @@
 $(function(){
-
+  insert_map();
+  $("#layers-button").on('click', layers_qtip);
+  $("#search-by-address-button").on('click', searchByAddress_qtip);
   $(".tab-bar .tab").on('click', show_active_tab);
   $("#details-link").on('click', show_active_tab);
   $('[data-role="navbar"] a').on('click', change_tab_content);
   $("#show-tab").on('click', show_active_tab);
   $("#show-tab").trigger('click'); //triggers click to show content on first tab on page load
-  insert_map();
   $(".top-bar-icons").on('click', insert_form);
-
 });
 
+
+function layers_qtip()
+{
+  $(this).qtip({
+      content: {
+        text: 'I have a button to my right!',
+        button: 'Close'
+      },
+      render: function (event, api) {
+          // Grab the content
+          var content = api.elements.content;
+          // Now it's is rendered, we can...
+          content.otherPlugin(); // ...Call our other plugins to act on its contents
+          $(this, content).otherPlugin(); // ...or a subset of it's contents!
+      },
+      show: {
+          modal: {
+              on: true,
+              solo: true
+          },
+
+          ready: true,
+          event: 'click',
+          effect: function (offset) {
+              $(this).slideDown(300);
+          }
+      },
+      events: {
+        show: function(event, api) {
+        }
+      },
+      style: {
+          classes: 'qtip-layers-panel qtip-rounded qtip-shadow qtip-light',
+          tip: {
+            corner: 'center left',
+            width: 100,
+            height: 100,
+            offset: 100
+        }
+      },
+      hide: {
+          event: 'click',
+          effect: function () {
+              $(this).slideUp(300);
+          }
+      },
+      overwrite: false,
+      position: {
+          my: 'center left',
+          at: 'center right',
+          target: $(this),
+          adjust: {
+            scroll: true // Can be ommited (e.g. default behaviour)
+        }
+      }
+      // api: {
+      //     onContentLoaded: $('.owl-item').each(function () {
+      //         $(this).attr('style', 'width: 250px');
+      //     })
+      // }
+  });
+}
+
+function searchByAddress_qtip()
+{
+  $(this).qtip({
+      content: {
+        text: '<div data-role="fieldcontain">' +
+              '<label for="search-2">Search Input:</label>' +
+              '<input type="search" name="search-2" id="search-2" value="" /></div>',
+        button: 'Close'
+      },
+      render: function (event, api) {
+          // Grab the content
+          var content = api.elements.content;
+          // Now it's is rendered, we can...
+          content.otherPlugin(); // ...Call our other plugins to act on its contents
+          $(this, content).otherPlugin(); // ...or a subset of it's contents!
+      },
+      show: {
+          modal: {
+              on: true,
+              solo: true
+          },
+
+          ready: true,
+          event: 'click',
+          effect: function (offset) {
+              $(this).slideDown(300);
+          }
+      },
+      events: {
+        show: function(event, api) {
+        }
+      },
+      style: {
+          classes: 'qtip-address-panel qtip-rounded qtip-shadow qtip-light',
+          tip: {
+            corner: 'center left',
+            width: 100,
+            height: 100,
+            offset: 100
+        }
+      },
+      hide: {
+          event: 'click',
+          effect: function () {
+              $(this).slideUp(300);
+          }
+      },
+      overwrite: false,
+      position: {
+          my: 'top right',
+          at: 'bottom left',
+          target: $('#search-by-address-button'),
+          adjust: {
+            scroll: true, // Can be ommited (e.g. default behaviour)
+            x: 20,
+            y: 20
+        }
+      }
+  });
+}
 
 $(function(){
   $("#map-link").on('click', refresh_map);

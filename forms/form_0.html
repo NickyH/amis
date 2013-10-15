@@ -1,23 +1,152 @@
 <div class="content_div">onLoad Content
 
   <!-- form1 tab1 -->
-  <div id="form1-tab1" class="content_div">
+  <div id="form1-tab1">
+
+    <div class="form-buttons">
+      <input type="submit" value="Cancel" class="form-button cancel-button" data-role="button" />
+      <input type="submit" value="Save" class="form-button save-button" data-role="button" />
+    </div>
 
     <!-- forms content -->
-    <div class="ui-block-a form-container">
+    <div class="ui-block-a form-container"> <!-- overall container -->
 
-      <div class="form-buttons">
-        <input type="submit" value="Cancel" class="form-button cancel-button" data-role="button" />
-        <input type="submit" value="Save" class="form-button save-button" data-role="button" />
-      </div>
-
-      <!-- form panel 1 -->
+      <!-- form row 1 -->
       <div class="ui-grid-a">
+
+        <!-- form panel 1 -->
+        <div class="ui-block-a">
+          <div class="form-panel form-panel-1">
+            <!-- numbered circle in each form panel-->
+            <div class="number-circle">
+              <div class="number-in-circle">
+                1
+              </div>
+            </div>
+
+            <div data-role="fieldcontain">
+
+              <div class="ui-grid-a input-grid">
+                <div class="ui-block-a"><label class="inline-label"><div class="innertext">ID</div></label></div>
+                <div class="ui-block-b"><input class="single-line-input" type="text" name="id" id="input-id" value="" placeholder="ID"/></div>
+              </div>
+
+              <div class="ui-grid-a input-grid">
+                <div class="ui-block-a"><label class="inline-label"><div class="innertext">Category</div></label></div>
+                <div class="ui-block-b">
+                  <select name="select-category" id="select-category" class="single-line-input">
+                    <option value="" data-placeholder="true"></option>
+                    <option value="small">One</option>
+                    <option value="medium">Two</option>
+                    <option value="large">Three</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="ui-grid-a input-grid">
+                <div class="ui-block-a"><label class="inline-label"><div class="innertext">Status</div></label></div>
+                <div class="ui-block-b"><input class="single-line-input" type="text" name="status" id="input-status" value="" placeholder="Status"/></div>
+              </div>
+
+              <div class="ui-grid-a input-grid">
+                <div class="ui-block-a"><label class="inline-label"><div class="innertext">From Asset</div></label></div>
+                <div class="ui-block-b"><input class="single-line-input" type="text" name="fromAsset" id="input-fromAsset" value="030600-MELBOURNE ROAD" placeholder="From Asset"/></div>
+              </div>
+
+              <div class="ui-grid-a input-grid">
+                <div class="ui-block-a"><label class="inline-label"><div class="innertext">PoR Type</div></label></div>
+                <div class="ui-block-b"><input class="single-line-input" type="text" name="portype" id="input-portype1" value="SE" /></div>
+              </div>
+
+              <div class="ui-grid-a input-grid">
+                <div class="ui-block-a"><label class="inline-label"><div class="innertext">Chainage (M)</div></label></div>
+                <div class="ui-block-b"><input class="single-line-input" type="text" name="chainage" id="input-chainage1" value="415" /></div>
+              </div>
+
+              <div class="ui-grid-a input-grid">
+                <div class="ui-block-a"><label class="inline-label"><div class="innertext">PoR Descr</div></label></div>
+                <div class="ui-block-b"><input class="single-line-input" type="text" name="pordescription" id="input-por-desc1" value="MELBOURNE ROAD-[S] IVANHOE ST to HEATHER AVE" /></div>
+              </div>
+
+              <div class="ui-grid-a input-grid">
+                <div class="ui-block-a"><label class="inline-label" for="toAsset"><div class="innertext">To Asset</div></label></div>
+                <div class="ui-block-b"><input class="single-line-input" type="text" name="toAsset" id="input-to-asset" value="030600-MELBOURNE ROAD" /></div>
+              </div>
+
+              <div class="ui-grid-a input-grid">
+                <div class="ui-block-a"><label class="inline-label"><div class="innertext">PoR Type</div></label></div>
+                <div class="ui-block-b"><input class="single-line-input" type="text" name="portype2" id="input-portype2" value="SE" /></div>
+              </div>
+
+              <div class="ui-grid-a input-grid">
+                <div class="ui-block-a"><label class="inline-label"><div class="innertext">Chainage (M)</div></label></div>
+                <div class="ui-block-b"><input class="single-line-input" type="text" name="chainage2" id="input-chainage2" value="415" /></div>
+              </div>
+
+              <div class="ui-grid-a input-grid">
+                <div class="ui-block-a"><label class="inline-label" for="pordesc2"><div class="innertext">PoR Descr</div></label></div>
+                <div class="ui-block-b"><input class="single-line-input" type="text" name="pordescription" id="input-por-desc2" value="MELBOURNE ROAD-[S] IVANHOE ST to HEATHER AVE" /></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- end form panel 1 -->
+
+        <!-- form panel 2 -->
+        <div class="ui-block-b">
+          <div class="form-panel form-panel-2">
+            <!-- numbered circle in each form panel-->
+            <div class="number-circle">
+              <div class="number-in-circle">
+                2
+              </div>
+            </div>
+            <div data-role="fieldcontain">
+
+              <div class="ui-grid-a input-grid">
+                <div class="ui-block-a"><label class="inline-label" for="location-descr">Location Descr</label></div>
+                <div class="ui-block-b"><input class="single-line-input" type="text" name="locDescr" id="input-location-descr" value="709 Melbourne Road, SORRENTO" /></div>
+              </div>
+
+              <div class="ui-grid-a input-grid">
+                <div class="ui-block-a"><label class="inline-label" for="select-category">Responsibility Of</label></div>
+                <div class="ui-block-b">
+                  <select name="select-category" id="select-category" class="single-line-input">
+                    <option value="" data-placeholder="true"></option>
+                    <option value="small">One</option>
+                    <option value="medium">Two</option>
+                    <option value="large">Three</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="ui-grid-a input-grid">
+                <div class="ui-block-a"><label class="inline-label" for="created-by">Created By</label></div>
+                <div class="ui-block-b"><input class="single-line-input" type="text" name="createdBy" id="input-created-by" value="Natalie Renouf" /></div>
+              </div>
+
+              <div class="ui-grid-a input-grid">
+                <div class="ui-block-a"><label class="inline-label" for="completed-by">Completed By</label></div>
+                <div class="ui-block-b"><input class="single-line-input" type="text" name="createdBy" id="input-created-by" value="" /></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- end form panel 2 -->
+      </div>
+      <!-- end form row 1 -->
+
+      <!-- form row 2 -->
+      <div class="ui-grid-a">
+
+        <!-- form panel 1 row 2 -->
         <div class="form-panel form-panel-1">
           <!-- numbered circle in each form panel-->
           <div class="number-circle">
             <div class="number-in-circle">
-              1
+              3
             </div>
           </div>
           <div data-role="fieldcontain">
@@ -87,28 +216,28 @@
           </div>
         </div>
       </div>
+      <!-- end form row 2 -->
 
-      <!-- form panel 2 -->
-      <div class="ui-grid-b">
+
+      <!-- form panel 2 row 2 -->
+      <div class="ui-block-b">
         <div class="form-panel form-panel-2">
           <!-- numbered circle in each form panel-->
           <div class="number-circle">
             <div class="number-in-circle">
-              2
+              4
             </div>
           </div>
+          <div data-role="fieldcontain">
 
-          <div data-role="fieldcontain" class="ui-hide-label">
-
-            <div class="input-container">
-              <label class="inline-label" for="location-descr">Location Descr</label>
-              <input class="single-line-input" type="text" name="locDescr" id="input-location-descr" value="709 Melbourne Road, SORRENTO" />
+            <div class="ui-grid-a input-grid">
+              <div class="ui-block-a"><label class="inline-label" for="location-descr">Location Descr</label></div>
+              <div class="ui-block-b"><input class="single-line-input" type="text" name="locDescr" id="input-location-descr" value="709 Melbourne Road, SORRENTO" /></div>
             </div>
 
-            <div class="input-container">
-              <!-- category dropdown box-->
-              <div data-role="fieldcontain" class="dropdown-input">
-                <label class="inline-label" for="select-category">Responsibility Of</label>
+            <div class="ui-grid-a input-grid">
+              <div class="ui-block-a"><label class="inline-label" for="select-category">Responsibility Of</label></div>
+              <div class="ui-block-b">
                 <select name="select-category" id="select-category" class="single-line-input">
                   <option value="" data-placeholder="true"></option>
                   <option value="small">One</option>
@@ -118,50 +247,24 @@
               </div>
             </div>
 
-            <div class="input-container">
-              <!-- category dropdown box-->
-              <div data-role="fieldcontain" class="dropdown-input">
-                <label class="inline-label" for="select-category">Position</label>
-                <select name="select-category" id="select-position" class="single-line-input">
-                  <option value="" data-placeholder="true"></option>
-                  <option value="small">One</option>
-                  <option value="medium">Two</option>
-                  <option value="large">Three</option>
-                </select>
-              </div>
+            <div class="ui-grid-a input-grid">
+              <div class="ui-block-a"><label class="inline-label" for="created-by">Created By</label></div>
+              <div class="ui-block-b"><input class="single-line-input" type="text" name="createdBy" id="input-created-by" value="Natalie Renouf" /></div>
             </div>
 
-            <div class="input-container">
-              <label class="inline-label" for="created-by">Created By</label>
-              <input class="single-line-input" type="text" name="createdBy" id="input-created-by" value="Natalie Renouf" />
-            </div>
-
-            <div class="input-container">
-              <label class="inline-label" for="completed-by">Completed By</label>
-              <input class="single-line-input" type="text" name="createdBy" id="input-created-by" value="" />
+            <div class="ui-grid-a input-grid">
+              <div class="ui-block-a"><label class="inline-label" for="completed-by">Completed By</label></div>
+              <div class="ui-block-b"><input class="single-line-input" type="text" name="createdBy" id="input-created-by" value="" /></div>
             </div>
 
           </div>
         </div>
       </div>
+      <!-- end row 2 -->
 
-      <div class="ui-block-solo form-container">
-        <div class="form-panel form-panel-3">
-          <!-- numbered circle in each form panel-->
-          <div class="number-circle">
-            <div class="number-in-circle">
-              3
-            </div>
-          </div>
-          <div data-role="fieldcontain" class="ui-hide-label">
-            <input class="single-line-input" type="text" name="code" id="input-code" value="" placeholder="Code"/>
-          </div>
-        </div>
-      </div>
+    </div> <!-- end form container -->
 
-      </div>
-
-    </div> <!-- end form1 tab1 -->
+  </div> <!-- end form1 tab1 -->
 
     <!-- start form1 tab2 -->
     <div id="form1-tab2" class="content_div">
