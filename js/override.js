@@ -1,9 +1,8 @@
 var owlHtml;
 
-
 $(function(){
   insert_map();
-  create_layers_carousel();
+  if (window.location === 'index.html') {create_layers_carousel()};
   $("#layers-button").on('click', layers_qtip);
   $("#search-by-address-button").on('click', searchByAddress_qtip);
   $(".tab-bar .tab").on('click', show_active_tab);
@@ -99,7 +98,7 @@ function layers_qtip()
       overwrite: false,
       position: {
           my: 'center left',
-          at: 'center right',
+          at: 'top right',
           target: $(this),
           adjust: {
             scroll: true // Can be ommited (e.g. default behaviour)
@@ -151,7 +150,9 @@ function searchByAddress_qtip()
             corner: 'center left',
             width: 100,
             height: 100,
-            offset: 100
+            offset: 100,
+            x: 100,
+            y: 200
         }
       },
       hide: {
@@ -184,6 +185,7 @@ function show_active_tab()
   $(this).addClass("tab-active");
   event.stopPropagation();
   $(this).siblings().removeClass("tab-active");
+  show_first_form();
 }
 
 // change content on tab click
@@ -207,11 +209,20 @@ function refresh_map()
   window.location = ('index.html');
 }
 
+// inserts the first form into the form page on initial load of details page
+function show_first_form()
+{
+  $.get('forms/form_0.html', function(data) {
+    $('#insert-form').html(data);
+    });
+  $('#insert-form').trigger('create');
+}
+
+
 // inserts the relevant form into the form page
 function insert_form()
 {
   var link_index = $('.top-bar-icons').index(this);
-  console.log(link_index);
   $.get('forms/form_' + link_index + '.html', function(data) {
     $('#insert-form').html(data);
     // $.mobile.loadPage( "forms/form_" + link_index + ".html", {
