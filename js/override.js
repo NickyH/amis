@@ -1,5 +1,9 @@
+var owlHtml;
+
+
 $(function(){
   insert_map();
+  create_layers_carousel();
   $("#layers-button").on('click', layers_qtip);
   $("#search-by-address-button").on('click', searchByAddress_qtip);
   $(".tab-bar .tab").on('click', show_active_tab);
@@ -10,20 +14,56 @@ $(function(){
   $(".top-bar-icons").on('click', insert_form);
 });
 
+function create_layers_carousel()
+{
+  owlHtml = $("#owl-layers").owlCarousel({
+
+    // Most important owl features
+    items : 5,
+    // itemsDesktop : [1199,4],
+    // itemsDesktopSmall : [980,3],
+    // itemsTablet: [768,2],
+    // itemsTabletSmall: false,
+    // itemsMobile : [479,1],
+    // singleItem : false,
+
+    //Basic Speeds
+    slideSpeed : 200,
+
+    //Autoplay
+    autoPlay : false,
+
+    // Navigation
+    navigation : true,
+    navigationText : ["prev","next"],
+    rewindNav : true,
+    scrollPerPage : false,
+
+    //Pagination
+    pagination : true,
+    paginationNumbers: false,
+
+    // Responsive
+    responsive: true,
+    responsiveRefreshRate : 200,
+    responsiveBaseWidth: window,
+
+    // CSS Styles
+    baseClass : "owl-carousel",
+    theme : "owl-theme",
+
+    //Transitions
+    transitionStyle : false,
+    })
+}
+
 
 function layers_qtip()
 {
   $(this).qtip({
       content: {
-        text: 'I have a button to my right!',
+        text: owlHtml,
         button: 'Close'
-      },
-      render: function (event, api) {
-          // Grab the content
-          var content = api.elements.content;
-          // Now it's is rendered, we can...
-          content.otherPlugin(); // ...Call our other plugins to act on its contents
-          $(this, content).otherPlugin(); // ...or a subset of it's contents!
       },
       show: {
           modal: {
@@ -64,12 +104,12 @@ function layers_qtip()
           adjust: {
             scroll: true // Can be ommited (e.g. default behaviour)
         }
+      },
+      api: {
+          onContentLoaded: $('.item').each(function () {
+              $(this).attr('style', 'width: 250px; height: 250px;');
+          })
       }
-      // api: {
-      //     onContentLoaded: $('.owl-item').each(function () {
-      //         $(this).attr('style', 'width: 250px');
-      //     })
-      // }
   });
 }
 

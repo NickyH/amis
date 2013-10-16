@@ -544,8 +544,9 @@ div[data-role="fieldcontain"] {
 // qtip styling
 
 .qtip, .qtip-modal {
+  max-width: 900px !important;
   width: 900px;
-  height: 200px;
+  min-height: 400px;
   .address-panel {
     max-width: 300px !important;
     max-height: 200px !important;
@@ -583,3 +584,156 @@ div[data-role="fieldcontain"] {
   background-size: contain !important;
 }
 
+.qtip-content {
+  width: 800px;
+  height: 400px;
+}
+
+
+//owl
+
+#owl-layers .item {
+  background: @white-medium;
+  margin-right: 20px;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: left;
+  font: @layers-header-font;
+  text-indent: 20px;
+  width: 200px;
+}
+
+.invisible {
+  visibility: hidden;
+  min-width: 100px !important;
+}
+
+.owl-wrapper {
+  white-space: nowrap !important;
+  width: 1000px !important;
+}
+
+.owl-wrapper-outer {
+  height: 200px !important;
+}
+
+.owl-carousel .owl-theme {
+  max-height: 400px !important;
+  opacity: 1;
+}
+
+.owl-item {
+  margin-right: 10px;
+}
+
+.owl-controls {
+  &.clickable {
+  display: block;
+  }
+}
+
+//collapsible layers menu
+
+.lyr {
+  width: 200px;
+  height: 20px;
+  list-style-type: none !important;
+  li {
+    padding: 10px;
+  }
+  &.lyr1 {
+    background-color: @lyr1-colour;
+    margin-bottom: 5px;
+    border-radius: 7px;
+    height: 30px;
+  }
+  &.lyr2 {
+    background-color: @lyr2-colour;
+    margin-bottom: 5px;
+    border-radius: 7px;
+    height: 30px;
+  }
+  &.lyr3 {
+    background-color: @lyr3-colour;
+    margin-bottom: 5px;
+    border-radius: 7px;
+    height: 30px;
+  }
+  &.lyr4 {
+    background-color: @lyr4-colour;
+    margin-bottom: 5px;
+    border-radius: 7px;
+    height: 30px;
+  }
+  &.lyr5 {
+    background-color: @lyr5-colour;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    height: 30px;
+  }
+  .lyr-left {
+    text-decoration: none;
+    color: @black-medium !important;
+    margin-bottom: 5px;
+    border-bottom-left-radius: 7px;
+    border-top-left-radius: 7px;
+    height: 30px;
+    width: 50%;
+    float: left;
+    &.lyr1 {
+    background-color: @lyr1-colour;
+    }
+    &.lyr2 {
+    background-color: @lyr2-colour;
+    }
+    &.lyr3 {
+    background-color: @lyr3-colour;
+    }
+    &.lyr4 {
+    background-color: @lyr4-colour;
+    }
+    &.lyr5 {
+    background-color: @lyr5-colour;
+    }
+    .layer-text-left {
+      margin-top: 7px;
+      margin-left: -20px;
+    }
+  }
+  .lyr-right {
+    text-decoration: none;
+    color: @black-medium !important;
+    margin-bottom: 5px;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+    height: 30px;
+    float: right;
+    background-color: @white-medium;
+    &.active {
+      background-color: green;
+    }
+    .layer-text-right {
+      margin-top: 7px;
+      margin-right: 12px;
+    }
+  }
+}
+
+.owl-item {
+  width: 200px !important;
+}
+
+.owl-carousel {
+  max-height: 200px !important;
+  .item {
+    width: 200px;
+    display: block;
+    float: left;
+    ul {
+      background-color: fade(@white, 100%);
+      padding-left: 0;
+    }
+  }
+}
