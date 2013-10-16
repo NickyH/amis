@@ -2,8 +2,8 @@ var owlHtml;
 
 $(function(){
   insert_map();
+  $('#form-page').on('pageinit', show_first_form);
   create_layers_carousel();
-  if (window.location === 'index.html') {create_layers_carousel()};
   $("#layers-button").on('click', layers_qtip);
   $("#search-by-address-button").on('click', searchByAddress_qtip);
   $(".tab-bar .tab").on('click', show_active_tab);
@@ -209,11 +209,6 @@ function insert_map()
     });
 }
 
-function refresh_map()
-{
-  window.location = ('index.html');
-}
-
 // inserts the first form into the form page on initial load of details page
 function show_first_form()
 {
@@ -223,6 +218,10 @@ function show_first_form()
   $('#insert-form').trigger('create');
 }
 
+function refresh_map()
+{
+  window.location = ('index.html');
+}
 
 // inserts the relevant form into the form page
 function insert_form()
