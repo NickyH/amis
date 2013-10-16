@@ -543,9 +543,13 @@ div[data-role="fieldcontain"] {
 
 // qtip styling
 
+#qtip-0 {
+margin-left: 50px;
+}
+
 .qtip, .qtip-modal {
-  max-width: 900px !important;
-  width: 900px;
+  max-width: 950px !important;
+  width: 880px;
   min-height: 250px;
   .address-panel {
     max-width: 300px !important;
@@ -585,16 +589,16 @@ div[data-role="fieldcontain"] {
 }
 
 .qtip-content {
-  width: 800px;
+  width: auto;
   height: 250px;
+  margin: 10px !important;
 }
 
 
 //owl
 
-#owl-layers .item {
+#owl-example .panel-item {
   background: @white-medium;
-  margin-right: 20px;
   color: #FFF;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -602,7 +606,7 @@ div[data-role="fieldcontain"] {
   text-align: left;
   font: @layers-header-font;
   text-indent: 20px;
-  width: 200px;
+  width: 200px !important;
 }
 
 .invisible {
@@ -612,11 +616,12 @@ div[data-role="fieldcontain"] {
 
 .owl-wrapper {
   white-space: nowrap !important;
-  width: 1000px !important;
+  width: 900px !important;
+  margin-top: 20px;
 }
 
 .owl-wrapper-outer {
-  height: 200px !important;
+  height: 250px !important;
 }
 
 .owl-carousel .owl-theme {
@@ -625,7 +630,9 @@ div[data-role="fieldcontain"] {
 }
 
 .owl-item {
-  margin-right: 10px;
+  width: auto !important;
+  margin-left: 6px;
+  margin-right: 6px;
 }
 
 .owl-controls {
@@ -704,31 +711,29 @@ div[data-role="fieldcontain"] {
   }
   .lyr-right {
     text-decoration: none;
-    color: @black-medium !important;
+    color: @white-medium !important;
     margin-bottom: 5px;
     border-bottom-right-radius: 7px;
     border-top-right-radius: 7px;
     height: 30px;
+    width: 40px;
     float: right;
     background-color: @black-medium;
-    &.active {
+    &.lyr-active {
       background-color: green;
       color: @white-medium;
     }
     .layer-text-right {
       margin-top: 7px;
       margin-right: 12px;
+      text-indent: -4px;
     }
   }
 }
 
-.owl-item {
-  width: 200px !important;
-}
-
 .owl-carousel {
   max-height: 200px !important;
-  .item {
+  .panel-item {
     width: 200px;
     display: block;
     float: left;
@@ -738,3 +743,20 @@ div[data-role="fieldcontain"] {
     }
   }
 }
+
+.nav-arrow {
+  &.arrow-left {
+    img {
+      -webkit-transform: rotate(180deg); /* Safari and Chrome */
+      width: 50px;
+      margin-right: 20px;
+      }
+    }
+  &.arrow-right {
+    img {
+      -webkit-transform: rotate(0deg); /* Safari and Chrome */
+      width: 50px;
+      margin-left: 20px;
+      }
+    }
+  }

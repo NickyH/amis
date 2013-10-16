@@ -16,7 +16,7 @@ $(function(){
 
 function create_layers_carousel()
 {
-  owlHtml = $("#owl-layers").owlCarousel({
+  owlHtml = $("#owl-example").owlCarousel({
 
     // Most important owl features
     items : 5,
