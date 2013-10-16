@@ -2,6 +2,7 @@ var owlHtml;
 
 $(function(){
   insert_map();
+  create_layers_carousel();
   if (window.location === 'index.html') {create_layers_carousel()};
   $("#layers-button").on('click', layers_qtip);
   $("#search-by-address-button").on('click', searchByAddress_qtip);
@@ -116,9 +117,12 @@ function searchByAddress_qtip()
 {
   $(this).qtip({
       content: {
-        text: '<div data-role="fieldcontain">' +
-              '<label for="search-2">Search Input:</label>' +
-              '<input type="search" name="search-2" id="search-2" value="" /></div>',
+        text: '<div data-role="fieldcontain" style="margin-top: 40px;">' +
+              '<input type="search" name="search-2" id="search-2" value="" style="width: 200px; margin-left:30px;" /></div>' +
+              '<input type="submit" value="Search Address" class="form-button save-button"' +
+              'data-role="button" style="background-color: #2584cd; border-radius: 20px;' +
+              'width: 200px; height: 25px; font: 16px arial, sans serif; margin-top: 20px;' +
+              'margin-right: auto; margin-left: 30px;" />',
         button: 'Close'
       },
       render: function (event, api) {
@@ -173,6 +177,7 @@ function searchByAddress_qtip()
         }
       }
   });
+  $('#address-search-panel').removeClass('invisible');
 }
 
 $(function(){
