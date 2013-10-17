@@ -40,7 +40,7 @@ div {
     }
   }
   &.category {
-    margin-bottom: 13px;
+    margin-bottom: 5px;
   }
 }
 
@@ -383,6 +383,7 @@ div {
     width: 100%;
     display: inline-block;
     background-color: @white-medium;
+    text-indent: 3px;
     }
   }
 
@@ -450,7 +451,7 @@ input[type="text"] {
 }
 
 select {
-  min-width: 110% !important;
+  width: 107% !important;
 }
 
 .ui-input-text, .ui-shadow-inset, .ui-corner-all, .ui-btn-shadow, .ui-body-c, .ui-select {
@@ -469,7 +470,7 @@ select {
 .single-line-input, .dropdown-input {
   width: 90%;
   border-radius: 5px;
-  height: 26px;
+  height: 27px;
   margin-bottom: 10px;
   float: right;
   &.dropdown-input {
@@ -485,6 +486,10 @@ select {
   margin-top: 10px;
   margin-bottom: 5px;
   vertical-align: middle;
+  &.required:before {
+    content: url(../images/red-star-fill-left.png);
+    zoom: 0.2;
+  }
 }
 
 
@@ -503,6 +508,10 @@ select {
   border-bottom-left-radius: 7px;
   text-align: left;
   text-indent: 10px;
+  &.pending {
+    background-color: @blue-light;
+    border: 1px solid @blue-medium;
+  }
 }
 
 .ui-grid-solo.input-grid {
@@ -529,7 +538,10 @@ select {
 }
 
 select.single-line-input {
-  height: 30px !important;
+  -webkit-appearance: menu;
+    -moz-appearance: menu;
+    appearance: menu;
+  height: 34px !important;
 }
 
 label.select-label-hidden {
