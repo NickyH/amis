@@ -35,8 +35,7 @@ function create_layers_carousel()
     autoPlay : false,
 
     // Navigation
-    navigation : true,
-    navigationText : ["prev","next"],
+    navigation : false,
     rewindNav : true,
     scrollPerPage : false,
 

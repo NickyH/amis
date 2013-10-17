@@ -770,6 +770,12 @@ div[data-role="fieldcontain"] {
   width: 200px;
   height: 20px;
   list-style-type: none !important;
+  &.ctgry {
+    background-color: @category-header;
+    margin-bottom: 5px;
+    border-radius: 7px;
+    height: 30px;
+    }
   li {
     padding: 10px;
   }
@@ -805,7 +811,7 @@ div[data-role="fieldcontain"] {
   }
   .lyr-left {
     text-decoration: none;
-    color: @black-medium !important;
+    color: @black !important;
     margin-bottom: 5px;
     border-bottom-left-radius: 7px;
     border-top-left-radius: 7px;
@@ -830,6 +836,11 @@ div[data-role="fieldcontain"] {
     .layer-text-left {
       margin-top: 7px;
       margin-left: -20px;
+    }
+    .category-text-left {
+      margin-top: 7px;
+      margin-left: -20px;
+      color: @white;
     }
   }
   .lyr-right {
