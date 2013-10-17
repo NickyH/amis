@@ -1,10 +1,11 @@
-var owlHtml;
+var owlLayersHtml;
 
 $(function(){
   insert_map();
   $('#form-page').on('pageinit', show_first_form);
   create_layers_carousel();
   $("#layers-button").on('click', layers_qtip);
+  $("#search-by-category-button").on('click', search_by_category_qtip);
   $("#search-by-address-button").on('click', searchByAddress_qtip);
   $(".tab-bar .tab").on('click', show_active_tab);
   $("#details-link").on('click', show_active_tab);
@@ -16,7 +17,7 @@ $(function(){
 
 function create_layers_carousel()
 {
-  owlHtml = $("#owl-example").owlCarousel({
+  owlLayersHtml = $("#owl-example").owlCarousel({
 
     // Most important owl features
     items : 5,
@@ -62,7 +63,7 @@ function layers_qtip()
 {
   $(this).qtip({
       content: {
-        text: $('.my-owl-wrapper'),
+        text: $('.layers-owl-wrapper'),
         button: 'Close'
       },
       show: {
@@ -179,6 +180,80 @@ function searchByAddress_qtip()
   });
   $('#address-search-panel').removeClass('invisible');
 }
+
+
+
+function search_by_category_qtip()
+{
+  $(this).qtip({
+      content: {
+        text: '<div class="panel-item category-panel">' +
+              '<ul><li class="lyr lyr1"><div class="layer-text-category">Category 1</div></li>' +
+              '<li class="lyr lyr1"><div class="layer-text-category">Category 2</div></li>' +
+              '<li class="lyr lyr1"><div class="layer-text-category">Category 3</div></li>' +
+              '<li class="lyr lyr1"><div class="layer-text-category">Category 4</div></li>' +
+              '<li class="lyr lyr1"><div class="layer-text-category">Category 5</div></li>' +
+              '<li class="lyr lyr1"><div class="layer-text-category">Category 6</div></li>' +
+              '<li class="lyr lyr1"><div class="layer-text-category">Category 7</div></li>' +
+              '<li class="lyr lyr1"><div class="layer-text-category">Category 8</div></li>' +
+              '<li class="lyr lyr1"><div class="layer-text-category">Category 9</div></li>' +
+              '<li class="lyr lyr1"><div class="layer-text-category">Category 10</div></li>' +
+              '<li class="lyr lyr1"><div class="layer-text-category">Category 11</div></li>' +
+              '<li class="lyr lyr1"><div class="layer-text-category">Category 12</div></li>' +
+              '<li class="lyr lyr1"><div class="layer-text-category">Category 13</div></li>' +
+              '<li class="lyr lyr1"><div class="layer-text-category">Category 14</div></li>' +
+              '</ul></div>',
+        button: 'Close'
+      },
+      show: {
+          modal: {
+              on: true,
+              solo: true
+          },
+
+          ready: true,
+          event: 'click',
+          effect: function (offset) {
+              $(this).slideDown(300);
+          }
+      },
+      events: {
+        show: function(event, api) {
+        }
+      },
+      style: {
+          classes: 'qtip-search-category qtip-rounded qtip-shadow qtip-light',
+          tip: {
+            corner: 'center left',
+            width: 100,
+            height: 100,
+            offset: 100
+        }
+      },
+      hide: {
+          event: 'click',
+          effect: function () {
+              $(this).slideUp(300);
+          }
+      },
+      overwrite: false,
+      position: {
+          my: 'center left',
+          at: 'top right',
+          target: $(this),
+          adjust: {
+            scroll: true // Can be ommited (e.g. default behaviour)
+        }
+      },
+      api: {
+          onContentLoaded: $('.item').each(function () {
+              $(this).attr('style', 'width: 250px; height: 250px;');
+          })
+      }
+  });
+}
+
+
 
 $(function(){
   $("#map-link").on('click', refresh_map);
