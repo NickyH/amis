@@ -169,6 +169,11 @@
                 <div class="ui-block-b"><input class="single-line-input" type="text" name="createdBy" id="input-created-by" value="" /></div>
               </div>
 
+              <div class="ui-grid-a input-grid">
+                <div class="ui-block-a"><label class="inline-label" for="date-completed"><div class="innertext">Date Completed</div></label></div>
+                <div class="ui-block-b"><input class="single-line-input" type="date" name="dateCompleted" id="input-created-by" value="" /></div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -288,13 +293,19 @@
 
               <div class="ui-grid-a input-grid">
                 <div class="ui-block-a"><label class="inline-label" for="defect-date-referral"><div class="innertext">Date Referral</div></label></div>
-                <div class="ui-block-b"><input class="single-line-input" type="text" name="date-referral" id="input-date-referral" value="" /></div>
+                <div class="ui-block-b"><input type="date" class="single-line-input" name="date-referral" id="input-date-referral" value="" /></div>
               </div>
 
-              <div class="ui-grid-a input-grid">
-                <div class="ui-block-a"><label class="inline-label" for="defect-notes"><div class="innertext">Notes</div></label></div>
-                <div class="ui-block-b"><textarea class="single-line-input" type="text" name="notes" id="input-defect-notes" value="" ></textarea></div>
+              <div class="textarea-group">
+                <div class="ui-grid-solo input-grid">
+                  <label class="inline-label" for="defect-notes"><div class="innertext">Notes</div></label>
+                </div>
+
+                <div class="ui-grid-solo input-grid">
+                  <textarea class="single-line-input" type="text" name="notes" id="input-defect-notes" value="" ></textarea>
+                </div>
               </div>
+
 
             </div>
           </div>

@@ -379,6 +379,7 @@ div {
   .single-line-input {
     width: 100%;
     display: inline-block;
+    background-color: @white-medium;
     }
   }
 
@@ -435,8 +436,17 @@ div {
   margin-bottom: 20px; //spacing between text input boxes
 }
 
-input.ui-input-text {
+input[type="date"] {
   font: @input-form-font;
+  min-width: 100% !important;
+}
+
+input[type="text"] {
+  font: @input-form-font;
+}
+
+select {
+  min-width: 110% !important;
 }
 
 .ui-input-text, .ui-shadow-inset, .ui-corner-all, .ui-btn-shadow, .ui-body-c, .ui-select {
@@ -479,18 +489,39 @@ input.ui-input-text {
   margin-right: 5px;
   display: inline-block;
   float: left;
-  width: 100%;
+  width: 97%;
   height: 32px;
-  background-color: @grey-medium;
+  border-top: @form-label-border;
+  border-left: @form-label-border;
+  border-bottom: @form-label-border;
+  background-color: @white-medium;
   border-top-left-radius: 7px;
   border-bottom-left-radius: 7px;
   text-align: left;
   text-indent: 10px;
 }
 
+.ui-grid-solo.input-grid {
+  textarea.single-line-input {
+    width: 95% !important;
+    float: left;
+    margin-left: 3px;
+    margin-top: 0;
+    min-height: 50px !important;
+  }
+}
+
+.textarea-group {
+  width: 100%;
+  .inline-label {
+    border-right: @form-label-border;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+    }
+ }
+
 .input-grid {
   width: 100%;
-  margin-bottom: 5px;
 }
 
 select.single-line-input {
