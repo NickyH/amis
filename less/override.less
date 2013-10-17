@@ -301,6 +301,10 @@ div {
   border-radius: @tab-border-radius;
   background-color: @tab-fill;
   text-decoration: none;
+  box-shadow: 2px 2px 5px 1px @grey-dark;
+  .ui-btn-text {
+    font: @form-tab-font !important;
+  }
   a {
     color: @black-medium;
   }
@@ -317,7 +321,12 @@ div {
   border-bottom-left-radius: 0;
   border: @tab-border-active;
   background-color: @tab-fill-active;
+  box-shadow: none;
   }
+}
+
+.tab-bar .tab:hover {
+  background-color: @tab-fill-hover;
 }
 
 // form numbering circle

@@ -1,3 +1,8 @@
+//import
+
+@import url(http://fonts.googleapis.com/css?family=Questrial);
+
+@questrial: 'Questrial', sans-serif;
 
 // Two main colours
 @map-highlight-colour: #862BD6;
@@ -62,10 +67,12 @@
 @tab-border: 1px solid @white;
 @tab-border-radius: 7px;
 @tab-fill: @white;
+@tab-fill-hover: @white-medium;
+
 @tab-fill-active: @white-medium;
 @tab-border-active: 1px solid @white-medium;
 
-.font-tab { font-family: 'Arial', sans-serif; font-weight: normal; }
+.font-tab { font-family: @questrial; font-weight: normal; }
 
 
 //Light
@@ -83,8 +90,11 @@
 
 @input-form-font: 14px arial,sans-serif;
 
-@form-button-font: 16px arial,sans-serif;
-@form-label-font: 13px arial,sans-serif;
+@form-button-font: 16px @questrial;
+
+@form-tab-font: 15px @questrial;
+
+@form-label-font: 13px @questrial;
 
 @layers-header-font: 14px arial, sans-serif;
 
