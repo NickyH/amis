@@ -44,17 +44,11 @@ div {
   }
 }
 
-.ui-grid-a > :nth-child(n) {
-  width: 49% !important;
-  display: inline-block;
-  float: left;
-}
 
-.ui-grid-b {
-  width: 48% !important;
-  &.input-grid {
-    width: 100% !important;
-  }
+.input-grid {
+    .ui-block-b {
+      width: 48% !important;
+    }
 }
 
 .ui-grid-c {
@@ -63,7 +57,7 @@ div {
   }
   .ui-block-a {
     &.inline-label {
-      width: 100%;
+      width: 500px;
     }
   }
 }
@@ -376,7 +370,7 @@ div {
     height: @heightTall;
     width: @widthLarge;
     margin-left: 100px;
-    margin-top: 150px;
+    margin-top: 170px;
     }
   .single-line-input {
     width: 90%;
@@ -419,7 +413,8 @@ div {
   border-radius: @form-panel-border-radius;
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px;
-  margin: 50px 0px 0px 40px;
+  box-shadow: 5px 5px 2px 2px @grey-medium;
+  margin: 50px 0px 7px 40px;
   display: inline-block;
   &.form-panel-1 {
     width: 70% !important;
@@ -543,6 +538,65 @@ label.select-label-hidden {
 
 div[data-role="fieldcontain"] {
     width: 100% !important;
+}
+
+
+
+//form media queries
+
+
+@media @widthLarge {
+  .ui-grid-a > :nth-child(n) {
+  width: 49% !important;
+  display: inline-block;
+  float: left;
+  }
+}
+
+@media @widthMediumLarge {
+  .ui-block-a {
+    width: 100% !important;
+    .form-panel {
+      float: right;
+    }
+  }
+  .ui-block-b {
+    width: 100% !important;
+    .form-panel {
+      float: right;
+    }
+  }
+  .input-grid {
+    .ui-block-a {
+      width: 49% !important;
+    }
+    .ui-block-a {
+      width: 49% !important;
+    }
+  }
+}
+
+@media @widthMedium {
+  .ui-block-a {
+    width: 100% !important;
+    .form-panel {
+      float: right;
+    }
+  }
+  .ui-block-b {
+    width: 100% !important;
+    .form-panel {
+      float: right;
+    }
+  }
+  .input-grid {
+    .ui-block-a {
+      width: 49% !important;
+    }
+    .ui-block-a {
+      width: 49% !important;
+    }
+  }
 }
 
 // form buttons
