@@ -62,7 +62,7 @@ function layers_qtip()
 {
   $(this).qtip({
       content: {
-        text: owlHtml,
+        text: $('.my-owl-wrapper'),
         button: 'Close'
       },
       show: {
