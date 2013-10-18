@@ -187,20 +187,15 @@ function search_by_category_qtip()
   $(this).qtip({
       content: {
         text: '<div class="panel-item category-panel">' +
-              '<ul><li class="lyr lyr1"><div class="layer-text-category">Category 1</div></li>' +
-              '<li class="lyr lyr1"><div class="layer-text-category">Category 2</div></li>' +
-              '<li class="lyr lyr1"><div class="layer-text-category">Category 3</div></li>' +
-              '<li class="lyr lyr1"><div class="layer-text-category">Category 4</div></li>' +
-              '<li class="lyr lyr1"><div class="layer-text-category">Category 5</div></li>' +
-              '<li class="lyr lyr1"><div class="layer-text-category">Category 6</div></li>' +
-              '<li class="lyr lyr1"><div class="layer-text-category">Category 7</div></li>' +
-              '<li class="lyr lyr1"><div class="layer-text-category">Category 8</div></li>' +
-              '<li class="lyr lyr1"><div class="layer-text-category">Category 9</div></li>' +
-              '<li class="lyr lyr1"><div class="layer-text-category">Category 10</div></li>' +
-              '<li class="lyr lyr1"><div class="layer-text-category">Category 11</div></li>' +
-              '<li class="lyr lyr1"><div class="layer-text-category">Category 12</div></li>' +
-              '<li class="lyr lyr1"><div class="layer-text-category">Category 13</div></li>' +
-              '<li class="lyr lyr1"><div class="layer-text-category">Category 14</div></li>' +
+              '<ul><li class="lyr ctgry"><div class="layer-text-category">Category 1 <i class="icon-long-arrow-down"></i></div></li>' +
+              '<li class="lyr ctgry"><div class="layer-text-category">Category 2 <i class="icon-long-arrow-down"></i></div></li>' +
+              '<li class="lyr ctgry"><div class="layer-text-category">Category 3 <i class="icon-long-arrow-down"></i></div></li>' +
+              '<li class="lyr ctgry"><div class="layer-text-category">Category 4 <i class="icon-long-arrow-down"></i></div></li>' +
+              '<li class="lyr ctgry"><div class="layer-text-category">Category 5 <i class="icon-long-arrow-down"></i></div></li>' +
+              '<li class="lyr ctgry"><div class="layer-text-category">Category 6 <i class="icon-long-arrow-down"></i></div></li>' +
+              '<li class="lyr ctgry"><div class="layer-text-category">Category 7 <i class="icon-long-arrow-down"></i></div></li>' +
+              '<li class="lyr ctgry"><div class="layer-text-category">Category 8 <i class="icon-long-arrow-down"></i></div></li>' +
+              '<li class="lyr ctgry"><div class="layer-text-category">Category 9 <i class="icon-long-arrow-down"></i></div></li>' +
               '</ul></div>',
         button: 'Close'
       },
