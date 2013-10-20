@@ -7,13 +7,15 @@ $(function(){
   $("#layers-button").on('click', layers_qtip);
   $("#search-by-category-button").on('click', search_by_category_qtip);
   $("#search-by-address-button").on('click', searchByAddress_qtip);
-  $(".tab-bar .tab").on('click', show_active_tab);
+  $(".tab").on('click', show_active_tab);
   $("#details-link").on('click', show_active_tab);
-  $('[data-role="navbar"] a').on('click', change_tab_content);
+  $('[data-role="navbar"] img').on('click', change_tab_content);
   $("#show-tab").on('click', show_active_tab);
   $("#show-tab").trigger('click'); //triggers click to show content on first tab on page load
   $(".top-bar-icons").on('click', insert_form);
+
 });
+
 
 function create_layers_carousel()
 {
@@ -253,19 +255,19 @@ $(function(){
   $("#map-link").on('click', refresh_map);
 });
 
-// add tab-active class to tab on click
+// add current class to image pages-icons class on click
 function show_active_tab()
 {
-  $(this).addClass("tab-active");
+  $(this).children('img').addClass("current");
   event.stopPropagation();
-  $(this).siblings().removeClass("tab-active");
   show_first_form();
 }
 
 // change content on tab click
 function change_tab_content()
 {
-  $(this).addClass('ui-btn-active');
+  $('.pages-icons').removeClass("current");
+  $(this).addClass('current');
   $('.content_div').hide();
   $('#' + $(this).attr('data-href')).show();
   return false;//stop default behavior of link
