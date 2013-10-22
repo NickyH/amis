@@ -292,9 +292,10 @@ function change_tab_content()
 
 function insert_map()
 {
-  $.get('map_openlayer.html', function(data) {
+  $.get('MapLayer.html', function(data) {
     $('#insert-map').html(data);
     });
+  $('#insert-map').trigger('create');
 }
 
 // inserts the first form into the form page on initial load of details page
