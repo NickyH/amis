@@ -2,12 +2,13 @@ var owlLayersHtml;
 
 $(function(){
   insert_map();
-  $('#form-page').on('pageinit', show_first_form);
+  $('#details-link').on('click', show_first_form);
+  $('#refresh-map').on('click', refresh_map);
   create_layers_carousel();
   $("#layers-button").on('click', layers_qtip);
   $("#search-by-category-button").on('click', search_by_category_qtip);
   $("#search-by-address-button").on('click', searchByAddress_qtip);
-  $(".top-bar-icons").on('click', insert_form);
+
   $(window).hashchange(check_form_location);
 
   $("#show-tab").on('click', show_active_tab);
@@ -279,7 +280,7 @@ function show_active_tab()
 {
   $(this).children('img').addClass("current");
   event.stopPropagation();
-  show_first_form();
+  show_form();
 }
 
 // change content on tab click
@@ -303,26 +304,19 @@ function show_first_form()
     $('#insert-form').html(data);
     });
   $('#insert-form').trigger('create');
+  window.location = ('form.html'); //initial refresh
+}
+
+// inserts the form into the form page on initial load of details page
+function show_form()
+{
+  $.get('forms/form_0.html', function(data) {
+    $('#insert-form').html(data);
+    });
+  $('#insert-form').trigger('create');
 }
 
 function refresh_map()
 {
   window.location = ('index.html');
-}
-
-// inserts the relevant form into the form page
-function insert_form()
-{
-  var link_index = $('.top-bar-icons').index(this);
-  $.get('forms/form_' + link_index + '.html', function(data) {
-    $('#insert-form').html(data);
-    // $.mobile.loadPage( "forms/form_" + link_index + ".html", {
-    //   pageContainer: $('#insert-form')
-    });
-  $('#insert-form').trigger('create');
-}
-
-function refresh_form()
-{
-  window.location = ('form.html');
 }
