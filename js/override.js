@@ -8,20 +8,31 @@ $(function(){
   $("#search-by-category-button").on('click', search_by_category_qtip);
   $("#search-by-address-button").on('click', searchByAddress_qtip);
   $(".top-bar-icons").on('click', insert_form);
-
+  $(window).hashchange(check_form_location);
 
   $("#show-tab").on('click', show_active_tab);
   $("#show-tab").trigger('click'); //triggers click to show content on first tab on page load
 });
 
-$(window).load(function(){
-  $('#form1-tab1').on('click', scroll_details);
 
-});
 
-function scroll_details()
+function check_form_location()
 {
-  alert('scroll-details');
+  if (document.location.hash === '#details_bookmark') {
+    $('html, body').animate({ scrollTop: 50});
+    $('.tab img').removeClass('current');
+    $('#tab1').addClass('current');
+  }
+  else if (document.location.hash === '#location_bookmark') {
+    $('html, body').animate({ scrollTop: 400});
+    $('.tab img').removeClass('current');
+    $('#tab2').addClass('current');
+  }
+  else if (document.location.hash === '#notes_bookmark') {
+    $('html, body').animate({ scrollTop: 1000});
+    $('.tab img').removeClass('current');
+    $('#tab3').addClass('current');
+  }
 }
 
 
@@ -272,18 +283,10 @@ function show_active_tab()
 }
 
 // change content on tab click
-// function change_tab_content()
-// {
-//   $('.pages-icons').removeClass("current");
-//   $(this).addClass('current');
-//   $('.content_div').hide();
-//   $('#' + $(this).attr('data-href')).show();
-//   return false;//stop default behavior of link
-// }
-
-function skip_to_section()
+function change_tab_content()
 {
-  console.log("hellloooooo");
+  $('.pages-icons').removeClass("current");
+  $(this).addClass('current');
 }
 
 function insert_map()
