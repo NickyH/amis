@@ -1,6 +1,9 @@
 var owlLayersHtml;
 
 $(function(){
+
+  // is_jqm_loaded();
+
   insert_map();
   $('#details-link').on('click', show_first_form);
   $('#refresh-map').on('click', refresh_map);
@@ -16,6 +19,14 @@ $(function(){
 });
 
 
+function is_jqm_loaded()
+{
+    if ( $.mobile ) {
+     alert('loaded');
+  } else {
+    alert('not loaded');
+  }
+}
 
 function check_form_location()
 {
