@@ -300,7 +300,7 @@ function insert_map()
 // inserts the first form into the form page on initial load of details page
 function show_first_form()
 {
-  $.get('forms/form_0.html', function(data) {
+  $.get('forms/form_asset.html', function(data) {
     $('#insert-form').html(data);
     });
   $('#insert-form').trigger('create');
@@ -310,7 +310,7 @@ function show_first_form()
 // inserts the form into the form page on initial load of details page
 function show_form()
 {
-  $.get('forms/form_0.html', function(data) {
+  $.get('forms/form_asset.html', function(data) {
     $('#insert-form').html(data);
     });
   $('#insert-form').trigger('create');
