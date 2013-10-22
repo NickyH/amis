@@ -24,7 +24,7 @@
               </div>
             </div>
 
-            <div data-role="fieldcontain">
+            <div data-role="fieldcontain" id="form1_details_link">
 
               <div class="ui-grid-a input-grid">
                 <div class="ui-block-a"><label class="inline-label pending"><div class="innertext required">ID</div></label></div>
@@ -184,7 +184,6 @@
 
 
       <!-- form row 3 -->
-      <div data-role="page" id="details_bookmark">
       <div class="ui-grid-a">
 
         <!-- form panel 1 row 3 -->
@@ -313,8 +312,12 @@
         </div>
         <!-- end form panel 2 row 3 -->
       </div>
-    </div>
       <!-- end form row 3 -->
+
+
+
+
+
 
       <!-- form row 4 -->
       <div class="ui-grid-a">
@@ -356,7 +359,7 @@
             </div>
           </div>
         </div>
-        <!-- end form panel 1 row 4-->
+        <!-- end form panel 1 row 4 -->
 
         <!-- form panel 2 row 4-->
         <div class="ui-block-b">
@@ -402,102 +405,14 @@
             </div>
           </div>
         </div>
-        <!-- end form panel 2 row 4-->
+        <!-- end form panel 2 row 4 -->
       </div>
       <!-- end form row 4 -->
 
 
-<div data-role="page" id="notes_bookmark">
-      <!-- form row 5 -->
-      <div class="ui-grid-a">
 
-        <!-- form panel 1 row 5 -->
-        <div class="ui-block-a">
-          <div class="form-panel form-panel-1">
-            <!-- numbered circle in each form panel-->
-            <div class="number-circle">
-              <div class="number-in-circle">
-                9
-              </div>
-            </div>
 
-            <div data-role="fieldcontain">
 
-              <div class="ui-grid-a input-grid">
-                <div class="ui-block-a"><label class="inline-label" for="date-received"><div class="innertext">Received Date</div></label></div>
-                <div class="ui-block-b"><input class="single-line-input" type="date" name="receivedDate" id="input-date-received" value="" /></div>
-              </div>
-
-              <div class="ui-grid-a input-grid">
-                <div class="ui-block-a"><label class="inline-label" for="created-by"><div class="innertext required">Created By</div></label></div>
-                <div class="ui-block-b"><input class="single-line-input" type="text" name="createdBy" id="input-created-by" value="Natalie Renouf" /></div>
-              </div>
-
-              <div class="ui-grid-a input-grid">
-                <div class="ui-block-a"><label class="inline-label" for="date-due"><div class="innertext">Date Due</div></label></div>
-                <div class="ui-block-b"><input class="single-line-input" type="date" name="dateDue" id="input-date-received" value="" /></div>
-              </div>
-
-              <div class="ui-grid-a input-grid category">
-                <div class="ui-block-a"><label class="inline-label pending"><div class="innertext required">Assigned To</div></label></div>
-                <div class="ui-block-b">
-                  <select name="select-category" id="select-assignedTo" class="single-line-input">
-                    <option value="" data-placeholder="true"></option>
-                    <option value="small">Bob Smith</option>
-                    <option value="medium">Julie Wang</option>
-                    <option value="large">Jess Park</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="ui-grid-a input-grid">
-                <div class="ui-block-a"><label class="inline-label" for="email"><div class="innertext">Email</div></label></div>
-                <div class="ui-block-b"><input class="single-line-input" type="text" name="email" id="input-to-asset" value="" /></div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-        <!-- end form panel 1 row 5 -->
-
-        <!-- form panel 2 row 5 -->
-        <div class="ui-block-b">
-          <div class="form-panel form-panel-2">
-            <!-- numbered circle in each form panel-->
-            <div class="number-circle">
-              <div class="number-in-circle double">
-                10
-              </div>
-            </div>
-            <div data-role="fieldcontain">
-
-              <div class="ui-grid-a input-grid">
-                <div class="ui-block-a"><label class="inline-label"><div class="innertext">From Asset</div></label></div>
-                <div class="ui-block-b"><input class="single-line-input" type="text" name="fromAsset" id="input-fromAsset" value="030600-MELBOURNE ROAD" placeholder="From Asset"/></div>
-              </div>
-
-              <div class="ui-grid-a input-grid">
-                <div class="ui-block-a"><label class="inline-label"><div class="innertext">PoR Type</div></label></div>
-                <div class="ui-block-b"><input class="single-line-input" type="text" name="portype" id="input-portype1" value="SE" /></div>
-              </div>
-
-              <div class="ui-grid-a input-grid">
-                <div class="ui-block-a"><label class="inline-label"><div class="innertext">Chainage (M)</div></label></div>
-                <div class="ui-block-b"><input class="single-line-input" type="text" name="chainage" id="input-chainage1" value="415" /></div>
-              </div>
-
-              <div class="ui-grid-a input-grid">
-                <div class="ui-block-a"><label class="inline-label"><div class="innertext">PoR Descr</div></label></div>
-                <div class="ui-block-b"><input class="single-line-input" type="text" name="pordescription" id="input-por-desc1" value="MELBOURNE ROAD-[S] IVANHOE ST to HEATHER AVE" /></div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-        <!-- end form panel 2 row 5 -->
-      </div>
-      <!-- end form row 5 -->
-</div>
 
 
 
@@ -597,7 +512,7 @@
     <div class="ui-grid-solo left-bar">
 
     <div class="ui-block-b">
-      <a href="index.html" id="map-link"><img class="left-bar-icons map-icon" src="images/icons/icon-globe.png"></a>
+      <a href="index.html" id="map-link"><img class="left-bar-icons map-icon" src="images/icons/icon-map.png"></a>
     </div>
 
     <div class="ui-block-a">

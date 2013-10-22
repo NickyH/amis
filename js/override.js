@@ -7,14 +7,22 @@ $(function(){
   $("#layers-button").on('click', layers_qtip);
   $("#search-by-category-button").on('click', search_by_category_qtip);
   $("#search-by-address-button").on('click', searchByAddress_qtip);
-  $(".tab").on('click', show_active_tab);
-  $("#details-link").on('click', show_active_tab);
-  $('[data-role="navbar"] img').on('click', change_tab_content);
-  $("#show-tab").on('click', show_active_tab);
-  $("#show-tab").trigger('click'); //triggers click to show content on first tab on page load
   $(".top-bar-icons").on('click', insert_form);
 
+
+  $("#show-tab").on('click', show_active_tab);
+  $("#show-tab").trigger('click'); //triggers click to show content on first tab on page load
 });
+
+$(window).load(function(){
+  $('#form1-tab1').on('click', scroll_details);
+
+});
+
+function scroll_details()
+{
+  alert('scroll-details');
+}
 
 
 function create_layers_carousel()
@@ -264,13 +272,18 @@ function show_active_tab()
 }
 
 // change content on tab click
-function change_tab_content()
+// function change_tab_content()
+// {
+//   $('.pages-icons').removeClass("current");
+//   $(this).addClass('current');
+//   $('.content_div').hide();
+//   $('#' + $(this).attr('data-href')).show();
+//   return false;//stop default behavior of link
+// }
+
+function skip_to_section()
 {
-  $('.pages-icons').removeClass("current");
-  $(this).addClass('current');
-  $('.content_div').hide();
-  $('#' + $(this).attr('data-href')).show();
-  return false;//stop default behavior of link
+  console.log("hellloooooo");
 }
 
 function insert_map()
