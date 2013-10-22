@@ -13,15 +13,18 @@
   left: 120px;
   top: 100px;
   width: 904px;
-  height: 500px;
+  height: auto;
 
 }
 
 #map {
   display: block;
   width: 904px;
-  height: 550px;
+  height: auto;
   margin: 0;
+  img {
+    width: 100%;
+  }
 }
 
 // jquery mobile specific overrides
@@ -952,3 +955,11 @@ div[data-role="fieldcontain"] {
       }
     }
   }
+
+
+// additional overrides for mockup prototype for conference
+
+.ui-mobile [data-role=page], .ui-mobile [data-role=dialog], .ui-page {
+  display: block !important;
+
+}
