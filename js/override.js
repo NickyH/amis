@@ -12,6 +12,7 @@ $(function(){
   $("#search-by-category-button").on('click', search_by_category_qtip);
   $("#search-by-address-button").on('click', searchByAddress_qtip);
   $("#map").on('click', showAssets_qtip);
+  $(".arrow-history-tree").on('click', showHistoryTree_qtip);
 
   $(window).hashchange(check_form_location);
 
@@ -342,6 +343,98 @@ function showAssets_qtip()
         }
       }
   });
+}
+
+function showHistoryTree_qtip()
+{
+  toggle_arrow();
+  $(this).qtip({
+    content: {
+      text: '<div id="processTreePanel">' +
+              '<div id="processTreeContainer">' +
+              '<div class="css-treeview">' +
+              '<li>' +
+              '<input type="checkbox" checked="checked"><label for="2c20eb11-0495-e211-9759-00a0d5ffffae"><a onclick="openProcess(\'2c20eb11-0495-e211-9759-00a0d5ffffae\',\'EmergencyPhone\', \'EmergencyPhone (00108)\')" id="2c20eb11-0495-e211-9759-00a0d5ffffae" href="#">EmergencyPhone (00108)</a></label><ul>' +
+              '<li>' +
+              '<input type="checkbox" checked="checked"><label for="f8bb31c4-3564-4c0d-b814-b05b51e2035e"><a onclick="openProcess(\'f8bb31c4-3564-4c0d-b814-b05b51e2035e\',\'CustomerRequest\', \'Customer Request (IDENTIFIED)\')" id="f8bb31c4-3564-4c0d-b814-b05b51e2035e" href="#">Customer Request (IDENTIFIED)</a></label><ul>' +
+              '<li style="display: list-item;"><a onclick="openProcess(\'94fa7a17-86b4-41d3-9d5b-c2052e789403\',\'Inspection\', \'Inspection (2.919, 04/09/2013)\')" id="94fa7a17-86b4-41d3-9d5b-c2052e789403" href="#" class="isClosed">Inspection (2.919, 04/09/2013)</a></li>' +
+              '<li><a onclick="openProcess(\'d2d1436e-7371-4893-9433-a611beba54b8\',\'Defect\', \'Defect (IDENTIFIED)\')" id="d2d1436e-7371-4893-9433-a611beba54b8" href="#">Defect (IDENTIFIED)</a></li>' +
+              '<li><a onclick="openProcess(\'26e4000e-395e-4fcf-8558-b7da4d1db054\',\'Defect\', \'Defect (IDENTIFIED)\')" id="26e4000e-395e-4fcf-8558-b7da4d1db054" href="#">Defect (IDENTIFIED)</a></li>' +
+              '</ul>' +
+              '</li>' +
+              '<li style="display: list-item;"><a onclick="openProcess(\'c3b54c23-83b3-47bf-bcb1-99442e05c3cf\',\'Inspection\', \'Inspection (1.919, 04/09/2013)\')" id="c3b54c23-83b3-47bf-bcb1-99442e05c3cf" href="#" class="isClosed">Inspection (1.919, 04/09/2013)</a></li>' +
+              '<li style="display: list-item;"><a onclick="openProcess(\'8f8eac78-b4ce-4d13-9787-310be4aa2e72\',\'Inspection\', \'Inspection (14.555, 01/07/2013)\')" id="8f8eac78-b4ce-4d13-9787-310be4aa2e72" href="#" class="isClosed">Inspection (14.555, 01/07/2013)</a></li>' +
+              '<li style="display: list-item;"><a onclick="openProcess(\'78d1253e-9837-4ad5-887c-e4a362ff2a55\',\'Task\', \'Task (COMPLETED)\')" id="78d1253e-9837-4ad5-887c-e4a362ff2a55" href="#" class="isClosed">Task (COMPLETED)</a></li>' +
+              '</ul>' +
+              '</li>' +
+              '</div>' +
+              '</div>' +
+              '<div id="showClosedContainer">' +
+              '<div class="ui-checkbox">' +
+              '<label data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-on" data-theme="b" data-mini="false" class="ui-checkbox-on ui-btn ui-btn-up-b ui-btn-corner-all ui-fullsize ui-btn-icon-left">' +
+              '<span class="ui-btn-inner"><span class="ui-btn-text">Show Closed' +
+              '</span><span class="ui-icon ui-icon-checkbox-on ui-icon-shadow">&nbsp;</span></span></label><input type="checkbox" data-corners="false" data-theme="b" id="chkShowClosed">' +
+              '</div>' +
+              '</div>' +
+              '</div>',
+    button: 'Close'
+    },
+    show: {
+        modal: {
+            on: true,
+            solo: true
+        },
+
+        ready: true,
+        event: 'click',
+        effect: function (offset) {
+            $(this).slideDown(300);
+        }
+    },
+    events: {
+      show: function(event, api) {
+      }
+    },
+    style: {
+        classes: 'qtip-history-tree qtip-rounded qtip-shadow qtip-light',
+        tip: {
+          corner: 'center left',
+          width: 100,
+          height: 100,
+          offset: 100
+      }
+    },
+    hide: {
+        event: 'click',
+        effect: function () {
+            $(this).slideUp(300);
+        }
+    },
+    events:{
+            hide: function(event, api){
+              toggle_arrow();
+            }
+          },
+    overwrite: false,
+    position: {
+        my: 'top left',
+        at: 'bottom right',
+        target: $(this),
+        adjust: {
+          scroll: true // Can be ommited (e.g. default behaviour)
+      }
+    },
+    api: {
+        onContentLoaded: $('.item').each(function () {
+            $(this).attr('style', 'width: 250px; height: 250px;');
+        })
+    }
+  });
+}
+
+function toggle_arrow()
+{
+  $(".arrow-history-tree").toggleClass('active');
 }
 
 
