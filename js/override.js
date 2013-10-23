@@ -353,18 +353,18 @@ function showHistoryTree_qtip()
       text: '<div id="processTreePanel">' +
               '<div id="processTreeContainer">' +
               '<div class="css-treeview">' +
-              '<li>' +
-              '<input type="checkbox" checked="checked"><label for="2c20eb11-0495-e211-9759-00a0d5ffffae"><a onclick="openProcess(\'2c20eb11-0495-e211-9759-00a0d5ffffae\',\'EmergencyPhone\', \'EmergencyPhone (00108)\')" id="2c20eb11-0495-e211-9759-00a0d5ffffae" href="#">EmergencyPhone (00108)</a></label><ul>' +
-              '<li>' +
-              '<input type="checkbox" checked="checked"><label for="f8bb31c4-3564-4c0d-b814-b05b51e2035e"><a onclick="openProcess(\'f8bb31c4-3564-4c0d-b814-b05b51e2035e\',\'CustomerRequest\', \'Customer Request (IDENTIFIED)\')" id="f8bb31c4-3564-4c0d-b814-b05b51e2035e" href="#">Customer Request (IDENTIFIED)</a></label><ul>' +
-              '<li style="display: list-item;"><a onclick="openProcess(\'94fa7a17-86b4-41d3-9d5b-c2052e789403\',\'Inspection\', \'Inspection (2.919, 04/09/2013)\')" id="94fa7a17-86b4-41d3-9d5b-c2052e789403" href="#" class="isClosed">Inspection (2.919, 04/09/2013)</a></li>' +
-              '<li><a onclick="openProcess(\'d2d1436e-7371-4893-9433-a611beba54b8\',\'Defect\', \'Defect (IDENTIFIED)\')" id="d2d1436e-7371-4893-9433-a611beba54b8" href="#">Defect (IDENTIFIED)</a></li>' +
-              '<li><a onclick="openProcess(\'26e4000e-395e-4fcf-8558-b7da4d1db054\',\'Defect\', \'Defect (IDENTIFIED)\')" id="26e4000e-395e-4fcf-8558-b7da4d1db054" href="#">Defect (IDENTIFIED)</a></li>' +
+              '<li class="no-list">' +
+              '<div class="tree-header"><input type="checkbox" checked="checked"><label for="2c20eb11-0495-e211-9759-00a0d5ffffae"><a href="#">EmergencyPhone (00108)</a></label><ul></div>' +
+              '<li class="no-list">' +
+              '<div class="tree-header"><input type="checkbox" checked="checked"><label for="f8bb31c4-3564-4c0d-b814-b05b51e2035e"><a href="#">Customer Request (IDENTIFIED)</a></label><ul></div>' +
+              '<li class="no-list"><img src="images/expanded-arrow.png" class="expanded-arrow"><a href="#" class="isClosed">Inspection (2.919, 04/09/2013)</a></li>' +
+              '<li class="no-list"><img src="images/expanded-arrow.png" class="expanded-arrow"><a href="#">Defect (IDENTIFIED)</a></li>' +
+              '<li class="no-list"><img src="images/expanded-arrow.png" class="expanded-arrow"><a href="#">Defect (IDENTIFIED)</a></li>' +
               '</ul>' +
               '</li>' +
-              '<li style="display: list-item;"><a onclick="openProcess(\'c3b54c23-83b3-47bf-bcb1-99442e05c3cf\',\'Inspection\', \'Inspection (1.919, 04/09/2013)\')" id="c3b54c23-83b3-47bf-bcb1-99442e05c3cf" href="#" class="isClosed">Inspection (1.919, 04/09/2013)</a></li>' +
-              '<li style="display: list-item;"><a onclick="openProcess(\'8f8eac78-b4ce-4d13-9787-310be4aa2e72\',\'Inspection\', \'Inspection (14.555, 01/07/2013)\')" id="8f8eac78-b4ce-4d13-9787-310be4aa2e72" href="#" class="isClosed">Inspection (14.555, 01/07/2013)</a></li>' +
-              '<li style="display: list-item;"><a onclick="openProcess(\'78d1253e-9837-4ad5-887c-e4a362ff2a55\',\'Task\', \'Task (COMPLETED)\')" id="78d1253e-9837-4ad5-887c-e4a362ff2a55" href="#" class="isClosed">Task (COMPLETED)</a></li>' +
+              '<li class="no-list"><img src="images/expanded-arrow.png" class="expanded-arrow"><a href="#" class="isClosed">Inspection (1.919, 04/09/2013)</a></li>' +
+              '<li class="no-list"><img src="images/expanded-arrow.png" class="expanded-arrow"><a href="#" class="isClosed">Inspection (14.555, 01/07/2013)</a></li>' +
+              '<li class="no-list"><img src="images/expanded-arrow.png" class="expanded-arrow"><a href="#" class="isClosed">Task (COMPLETED)</a></li>' +
               '</ul>' +
               '</li>' +
               '</div>' +
