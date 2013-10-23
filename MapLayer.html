@@ -17,6 +17,10 @@
 
     <script type="text/javascript">
 
+        $(function(){
+            $("#map").on('click', showAssets_qtip);
+        });
+
         function openActionRow(row) {
             $('#infoPopupTable tbody tr').each(function () {
                 $(this).removeClass('actionRow');
@@ -47,7 +51,7 @@
 <body>
     <div data-role="page">
         <a id="map" href="#featureInfoGridPopup" data-rel="popup" data-transition="pop">
-            <img src="images/OsmMap_Feature.PNG" alt="" /></a>
+            <img id="mapstatic" src="images/OsmMap_Feature.PNG" alt="" /></a>
 
         <div data-role="popup" id="featureInfoGridPopup" data-corners="true" data-dismissible="false">
             <a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
