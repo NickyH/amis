@@ -221,7 +221,7 @@ function showAssets_qtip()
         text: '<div id="featureInfoGridPopup">' +
               '<a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right"></a>' +
               '<div id="featureInfoGrid">' +
-              '<table id="infoPopupTable" data-role="table" data-mode="reflow" class="ui-responsive table-stroke">' +
+              '<table id="infoPopupTable" data-role="table" data-mode="reflow" class="ui-responsive table-stroke" style="border-style: none;">' +
               '<tr>' +
               '<th></th>' +
               '<th>Feature Type</th>' +
@@ -240,11 +240,11 @@ function showAssets_qtip()
               '<tr style="display:none;">' +
               '<td colspan="5">' +
               '<div data-role="controlgroup" data-type="horizontal" class="button-row">' +
-              '<a data-role="button" href="#" onclick=""><img class="top-bar-icons icon-small icon-request" src="images/icons/icon-search-by-number.png"></a>' +
-              '<a data-role="button" href="#" onclick=""><img class="top-bar-icons icon-small icon-request" src="images/icons/icon_request_black.png"></a>' +
-              '<a data-role="button" href="#" onclick=""><img class="top-bar-icons icon-small icon-request" src="images/icons/icon_defect_black.png"></a>' +
-              '<a data-role="button" href="#" onclick=""><img class="top-bar-icons icon-small icon-request" src="images/icons/icon_task_black.png"></a>' +
-              '<a data-role="button" href="#" onclick=""><img class="top-bar-icons icon-small icon-request" src="images/icons/icon_settings_black.png"></a>' +
+              '<a data-role="button" href="#" onclick="open_form_from_asset()"><img class="top-bar-icons icon-small icon-settings" src="images/icons/icon_settings_black.png"></a>' +
+              '<a data-role="button" href="#" onclick="open_form_from_asset()"><img class="top-bar-icons icon-small icon-tasks" src="images/icons/icon_task_black.png"></a>' +
+              '<a data-role="button" href="#" onclick="open_form_from_asset()"><img class="top-bar-icons icon-small icon-defects" src="images/icons/icon_defect_black.png"></a>' +
+              '<a data-role="button" href="#" onclick="open_form_from_asset()"><img class="top-bar-icons icon-small icon-request" src="images/icons/icon_request_black.png"></a>' +
+              '<a data-role="button" href="#" onclick="open_form_from_asset()"><img class="top-bar-icons icon-small icon-assets" src="images/icons/icon-search-by-number.png"></a>' +
               '</div>' +
               '</td>' +
               '</tr>' +
@@ -258,12 +258,12 @@ function showAssets_qtip()
               '</tr>' +
               '<tr style="display:none;">' +
               '<td colspan="5">' +
-              '<div data-role="controlgroup" data-type="horizontal">' +
-              '<a data-role="button" href="#" onclick="">Open</a>' +
-              '<a data-role="button" href="#" onclick="">Customer Request</a>' +
-              '<a data-role="button" href="#" onclick="">Inspection</a>' +
-              '<a data-role="button" href="#" onclick="">Defect</a>' +
-              '<a data-role="button" href="#" onclick="">Task</a>' +
+              '<div data-role="controlgroup" data-type="horizontal" class="button-row">' +
+              '<a data-role="button" href="#" onclick="open_form_from_asset()"><img class="top-bar-icons icon-small icon-settings" src="images/icons/icon_settings_black.png"></a>' +
+              '<a data-role="button" href="#" onclick="open_form_from_asset()"><img class="top-bar-icons icon-small icon-tasks" src="images/icons/icon_task_black.png"></a>' +
+              '<a data-role="button" href="#" onclick="open_form_from_asset()"><img class="top-bar-icons icon-small icon-defects" src="images/icons/icon_defect_black.png"></a>' +
+              '<a data-role="button" href="#" onclick="open_form_from_asset()"><img class="top-bar-icons icon-small icon-request" src="images/icons/icon_request_black.png"></a>' +
+              '<a data-role="button" href="#" onclick="open_form_from_asset()"><img class="top-bar-icons icon-small icon-assets" src="images/icons/icon-search-by-number.png"></a>' +
               '</div>' +
               '</td>' +
               '</tr>' +
@@ -277,12 +277,12 @@ function showAssets_qtip()
               '</tr>' +
               '<tr style="display:none;">' +
               '<td colspan="5">' +
-              '<div data-role="controlgroup" data-type="horizontal">' +
-              '<a data-role="button" href="#" onclick="">Open</a>' +
-              '<a data-role="button" href="#" onclick="">Customer Request</a>' +
-              '<a data-role="button" href="#" onclick="">Inspection</a>' +
-              '<a data-role="button" href="#" onclick="">Defect</a>' +
-              '<a data-role="button" href="#" onclick="">Task</a>' +
+              '<div data-role="controlgroup" data-type="horizontal" class="button-row">' +
+              '<a data-role="button" href="#" onclick="open_form_from_asset()"><img class="top-bar-icons icon-small icon-settings" src="images/icons/icon_settings_black.png"></a>' +
+              '<a data-role="button" href="#" onclick="open_form_from_asset()"><img class="top-bar-icons icon-small icon-tasks" src="images/icons/icon_task_black.png"></a>' +
+              '<a data-role="button" href="#" onclick="open_form_from_asset()"><img class="top-bar-icons icon-small icon-defects" src="images/icons/icon_defect_black.png"></a>' +
+              '<a data-role="button" href="#" onclick="open_form_from_asset()"><img class="top-bar-icons icon-small icon-request" src="images/icons/icon_request_black.png"></a>' +
+              '<a data-role="button" href="#" onclick="open_form_from_asset()"><img class="top-bar-icons icon-small icon-assets" src="images/icons/icon-search-by-number.png"></a>' +
               '</div>' +
               '</td>' +
               '</tr>' +
@@ -586,3 +586,10 @@ function openActionRow(row) {
         }
     };
 })(jQuery);
+
+
+
+function open_form_from_asset()
+{
+  show_first_form();
+}

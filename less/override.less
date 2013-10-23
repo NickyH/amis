@@ -150,12 +150,20 @@ div {
     background-color: @form-highlight-colour !important;
   }
   &.icon-small {
-    width: 50px;
+    position: relative;
+    display: inline-block;
+    float: right;
+    margin-right: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: auto;
   }
 }
 
 .button-row {
-  height: 60px;
+  height: 80px;
+  width: 100%;
+  background-color: fade(lightblue, 50%);
 }
 
 .tab-shape {
@@ -711,7 +719,7 @@ div[data-role="fieldcontain"] {
 .qtip {
   &.qtip-assets-select {
     width: 800px;
-    height: 250px;
+    height: 300px;
   }
 }
 
@@ -995,5 +1003,19 @@ div[data-role="fieldcontain"] {
 }
 
 #infoPopupTable {
+  font-family: arial;
+  color: @black;
+  font-size: 13px;
+  text-shadow: none !important;
+  border: none !important;
+  border-spacing: 0;
   width: 730px;
+  td {
+    border: none !important;
+    border-bottom: none !important;
+  }
+  tr {
+    border: none !important;
+    height: 40px;
+  }
 }
