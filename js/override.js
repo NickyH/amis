@@ -17,8 +17,15 @@ $(function(){
 
   $("#show-tab").on('click', show_active_tab);
   $("#show-tab").trigger('click'); //triggers click to show content on first tab on page load
+
+  $("#select-layer-fake").on('click', show_fake_map);
 });
 
+
+function show_fake_map()
+{
+  $('#mapstatic').attr('src', "images/OsmMap_Feature.png")
+}
 
 function is_jqm_loaded()
 {
