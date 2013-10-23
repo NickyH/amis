@@ -51,7 +51,7 @@ function check_form_location()
     $('#tab2').addClass('current');
   }
   else if (document.location.hash === '#notes_bookmark') {
-    $('html, body').animate({ scrollTop: 1000});
+    $('html, body').animate({ scrollTop: 1200});
     $('.tab img').removeClass('current');
     $('#tab3').addClass('current');
   }
