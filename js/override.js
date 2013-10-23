@@ -25,6 +25,7 @@ $(function(){
 function show_fake_map()
 {
   $('#mapstatic').attr('src', "images/OsmMap_Feature.png")
+  $('.qtip-layers-panel').qtip('api').hide();
 }
 
 function is_jqm_loaded()
